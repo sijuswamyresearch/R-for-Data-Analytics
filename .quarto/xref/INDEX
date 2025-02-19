@@ -10,5 +10,23 @@
   },
   "references.qmd": {
     "references.html": "a0f13684"
+  },
+  "basics.qmd": {
+    "basics.html": "9baed75a"
+  },
+  "descriptive-statistics.qmd": {
+    "descriptive-statistics.html": "3bfecded"
+  },
+  "EDA.qmd": {
+    "EDA.html": "c907ddd3"
+  },
+  "data-cleaning.qmd": {
+    "data-cleaning.html": "92698319"
+  },
+  "statistical-methods.qmd": {
+    "statistical-methods.html": "caf770d1"
+  },
+  "visualization-vs-presentation.qmd": {
+    "visualization-vs-presentation.html": "9e44fce0"
   }
 }

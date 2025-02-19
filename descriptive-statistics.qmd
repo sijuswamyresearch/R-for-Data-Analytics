@@ -1,0 +1,141 @@
+# Descriptive Statistics
+
+## Introduction
+
+In this lesson, we'll delve into the world of descriptive statistics. Descriptive statistics provide a summary of your data, allowing you to understand its central tendency, variability, and shape. We'll learn how to calculate common descriptive statistics in R and interpret their meaning.
+
+## Learning Objectives
+
+*   Calculate measures of central tendency (mean, median, mode).
+*   Calculate measures of dispersion (standard deviation, variance, IQR, range).
+*   Use `dplyr::summarize()` to efficiently calculate descriptive statistics.
+*   Understand the relationship between descriptive statistics and data distribution.
+*   Calculate descriptive statistics for your cloud hosted R project.
+*   Commit changes to cloud hosted R project with descriptive statistics.
+
+## Measures of Central Tendency
+
+Measures of central tendency describe the "center" of a dataset.
+
+1.  **Mean:** The average of all values.
+    *   Calculated as the sum of the values divided by the number of values.
+
+    ```{r}
+    scores <- c(75, 80, 92, 68, 85)
+    mean(scores)
+    ```
+
+2.  **Median:** The middle value when the data is sorted.
+    *   If there are an even number of values, the median is the average of the two middle values.
+
+    ```{r}
+    median(scores)
+    ```
+
+3.  **Mode:** The most frequent value in the dataset.
+    *   R doesn't have a built-in function to calculate the mode directly, so we'll create one:
+
+    ```{r}
+    getmode <- function(v) {
+      uniqv <- unique(v)
+      uniqv[which.max(tabulate(match(v, uniqv)))]
+    }
+
+    values <- c(1, 2, 2, 3, 4, 4, 4, 5)
+    getmode(values)
+    ```
+
+**When to Use Which Measure:**
+
+*   **Mean:** Sensitive to outliers (extreme values). Use when the data is relatively symmetrical and has no extreme outliers.
+*   **Median:** Robust to outliers. Use when the data has outliers or is skewed.
+*   **Mode:** Useful for categorical data or discrete data with repeating values.
+
+## Measures of Dispersion
+
+Measures of dispersion describe the spread or variability of a dataset.
+
+1.  **Standard Deviation:** A measure of how spread out the data is around the mean.
+    *   A higher standard deviation indicates greater variability.
+
+    ```{r}
+    sd(scores)
+    ```
+
+2.  **Variance:** The square of the standard deviation.
+    *   Also measures variability, but is less interpretable than standard deviation.
+
+    ```{r}
+    var(scores)
+    ```
+
+3.  **Interquartile Range (IQR):** The difference between the 75th percentile (Q3) and the 25th percentile (Q1).
+    *   Robust to outliers and provides a measure of the spread of the middle 50% of the data.
+
+    ```{r}
+    IQR(scores)
+    ```
+
+4.  **Range:** The difference between the maximum and minimum values.
+
+    ```{r}
+    range(scores)
+    diff(range(scores)) #Calculate the range from the output
+    ```
+
+## Descriptive Statistics with `dplyr::summarize()`
+
+The `dplyr` package provides the `summarize()` function, which makes it easy to calculate multiple descriptive statistics at once:
+
+```{r}
+library(dplyr)
+
+#Replace this file with your local file.
+exam_scores <- read.csv("https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv")
+
+exam_scores %>%
+  summarize(
+    mean_score = mean(score),
+    median_score = median(score),
+    sd_score = sd(score),
+    iqr_score = IQR(score),
+    min_score = min(score),
+    max_score = max(score)
+  )
+```
+
+### Grouped Descriptive Statistics
+
+You can calculate descriptive statistics for different groups within your data using `dplyr::group_by()` in combination with `summarize()`:
+
+```{r}
+exam_scores %>%
+  group_by(grade) %>%
+  summarize(
+    mean_score = mean(score),
+    median_score = median(score),
+    sd_score = sd(score)
+  )
+```
+
+## Descriptive Statistics and Data Distribution
+
+Descriptive statistics provide insights into the distribution of your data:
+
+*   **Symmetrical Distribution:**
+    *   Mean ≈ Median ≈ Mode
+    *   Standard deviation is relatively small.
+*   **Right-Skewed Distribution:**
+    *   Mean > Median > Mode
+    *   Long tail on the right side.
+*   **Left-Skewed Distribution:**
+    *   Mean < Median < Mode
+    *   Long tail on the left side.
+
+## Practice
+
+1.  Load the `exam_scores.csv` dataset (or your own dataset).
+2.  Calculate the mean, median, standard deviation, IQR, and range for a numerical column.
+3.  Create a custom function to calculate the mode.
+4.  Calculate descriptive statistics for different groups within the data (e.g., by gender, by region).
+5.  Describe the shape of the data based on the descriptive statistics you calculated.

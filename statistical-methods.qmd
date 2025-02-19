@@ -1,0 +1,173 @@
+# Statistical Methods for Evaluation
+
+---
+title: Statistical Methods for Evaluation
+---
+
+## Welcome!
+
+In this lesson, we will cover statistical methods used for evaluating data and validating hypotheses. Knowing the different types of statistical tests to perform will be critical for your own dataset.
+
+## Learning Objectives
+
+*   Explain the purpose of performing statistical tests.
+*   Identify what kind of data types to use for statistical tests.
+*   Create a new working git branch with statistical tests
+
+## What is a statistical test?
+
+Statistical methods are used to interpret the data. It can include data cleaning, transformation and finding the right models or methods to test.
+
+Some statistical tests are meant to understand the distributions of data. Other types of statistical tests are meant to compare one distribution against another, or to see if there is a relationships between the dataset.
+
+### Types of Data that work best with different tests
+
+Different data formats have unique distributions, which are important to understand before performing any statistical tests. Tests like T-Tests work best with normal-style data, which has to be manually created. Also, there are tests that can convert data into a numerical result to run another test.
+
+For this exercise we will discuss the common types of tests:
+
+*   **Normal test** Normal test involves checking a statistical assumption. One of the most common checks is the normality assumption.
+*   **T-test** Allows for 2 means to be compared. The most common type involves the use of numerical values to perform a comparison.
+*   **Pearson Test** Determines how strong a relationship is between 2 distributions
+
+*   **Chi-squared Test:** Use for evaluating the relationship between 2 categorical features.
+
+### Performing a Normal Statistical Test
+
+In general, to create a normal set of distributions, you can use a built in function, for example `rnorm` to quickly create a normal distribution. Here's how to create the data and to run a "Normal test" to validate the data:
+
+1.  Create Dataset
+
+```{r}
+# create a normally distributed population set
+population_norm <- data.frame(value = rnorm(n = 1000000, mean = 0, sd = 1))
+summary(population_norm)
+```
+
+```{r}
+library(ggplot2)
+#Visualize distribution, from previous steps.
+ggplot(population_norm, aes(value)) +
+  geom_density()
+```
+
+1. Testing of normality of the data
+
+```{r}
+shapiro.test(population_norm$value[1:5000]) #Run the test.
+```
+
+If the p-value is less than the significance level (alpha) you reject the null hypothesis and it means there is a statistical significance. In this case, reject null. The shapiro test is testing if the data "normal". But in this case if the test passes it has to be rejected, since it will be testing if data is "non-normal", thus the need to invert the value.
+
+### Performing a t- Test
+
+
+A t-test can be very useful in checking if 2 samples have differences. Here's how you would run a t-Test.
+
+```{r}
+library(tidyverse)
+
+# Create two different populations
+population1 <- data.frame(value = rnorm(n = 50, mean = 0, sd = 1), group = "A")
+population2 <- data.frame(value = rnorm(n = 50, mean = .5, sd = 1), group = "B")
+
+# Combine populations
+population_combined <- rbind(population1, population2)
+tble=table(population_combined$group)
+barplot(tble)
+```
+
+```{r}
+library(dplyr)
+
+# mean of samples
+# Calculate mean of samples over group
+mean_by_group <- population_combined %>%
+  group_by(group) %>%
+  summarize(mean_value = mean(value))
+
+print(mean_by_group)
+```
+
+Perform t Test. Note, that for this particular function, you will need at least 2 variable.
+
+```{r}
+t.test(data = population_combined, value ~ group)
+```
+
+From here the t-test is the main value to look for, which validates whether the averages are different. The important detail here is the p-value. As mentioned earlier, if the P-Value is less than the alpha, which is typically 0.05, it means that we should reject that distribution.
+
+### Performing a correlation Test
+
+
+Correlation test will help find any relationships within the data. The most common type of test is the Pearson Test.
+
+```{r}
+#Create data with relationships
+library(tidyverse)
+set.seed(123)
+x = rnorm(100)
+data <- data.frame(
+  x,
+  y = 2*x + rnorm(100)
+)
+#data
+cor(data)
+```
+
+Correlation between the two variables can be tested using the pearson corelation test.
+
+```{r}
+cor.test(data$x, data$y, method = "pearson")
+```
+
+Looking at the information, the details for Pearson tests show a "correlation" value.
+
+### Performing a chi-squared Test
+
+
+
+The Chi-squared test is used to determine if there is a statistically significant association between two categorical variables. It's used when you have data organized in a contingency table (a cross-tabulation of two categorical variables).
+
+**Hypotheses:**
+
+*   **Null Hypothesis (H0):** There is no association between the two categorical variables.
+*   **Alternative Hypothesis (H1):** There is an association between the two categorical variables.
+
+Here's how to perform a Chi-squared test in R:
+
+1.  **Create a Contingency Table:** Create a cross-tabulation of the two categorical variables.
+
+```{r}
+library(tidyverse)
+
+# Create a sample dataset 
+data <- data.frame(
+  gender = factor(rep(c("Male", "Female"), times = c(40, 70))),
+  smoker = factor(rep(c("Yes", "No"), times = c(60, 50)))
+)
+
+# Create a contingency table
+contingency_table <- table(data$gender, data$smoker)
+print(contingency_table)
+```
+
+Performing chi-squared test.
+
+```{r}
+# Perform the Chi-squared test
+chi_squared_test <- chisq.test(contingency_table)
+print(chi_squared_test)
+```
+
+>**Interpreting the Results:**
+
+The output of `chisq.test()` will provide the following information:
+
+*   **Chi-squared Statistic:** A measure of the difference between the observed and expected frequencies.
+*   **Degrees of Freedom:** Reflects the number of independent pieces of information used in the test.
+*   **P-value:** The probability of obtaining the observed results (or more extreme results) if the null hypothesis is true.
+    *   A small P-value indicates that the null hypothesis is unlikely to be true.
+*   **Decision:** If the p-value is less than or equal to the significance level (alpha), you reject the null hypothesis.
+    *   If `p-value <= alpha`, reject the null hypothesis.
+    *   If `p-value > alpha`, fail to reject the null hypothesis.

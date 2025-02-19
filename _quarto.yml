@@ -8,8 +8,12 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - basics.qmd
+    - data-cleaning.qmd
+    - descriptive-statistics.qmd
+    - EDA.qmd
+    - visualization-vs-presentation.qmd
+    - statistical-methods.qmd
 
 bibliography: references.bib
 

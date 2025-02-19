@@ -1,0 +1,135 @@
+# Data Cleaning and Transformation
+
+## Introduction
+
+In this lesson, we'll tackle the often-messy reality of real-world data: dirty data. We'll learn how to identify common data quality issues like missing values, outliers, and inconsistencies, and then apply techniques in R to clean and transform the data into a usable format. This lesson will also focus on cloud deployments with version control.
+
+## Learning Objectives
+
+*   Identify common data quality issues.
+*   Detect missing values and apply appropriate handling methods (removal, imputation).
+*   Detect outliers and apply appropriate handling methods (trimming, capping, transformation).
+*   Correct inconsistent data entries (e.g., typos, inconsistent formatting).
+*   Commit and upload the project again to version control.
+
+## What is Dirty Data?
+
+Dirty data refers to data that is inaccurate, incomplete, inconsistent, or otherwise unreliable. Common sources of dirty data include:
+
+*   Human error during data entry
+*   Data integration issues from multiple sources
+*   Software bugs
+*   Inconsistent data standards
+
+## The `exam_scores` Dataset: Let's Get Specific
+
+We'll use our `exam_scores` dataset (or a modified version with intentional errors) to illustrate these cleaning techniques. We'll assume the dataset contains columns like:
+
+*   `student_id`: Unique identifier for each student.
+*   `study_hours`: Number of hours spent studying.
+*   `score`: Exam score (out of 100).
+*   `grade`: Letter grade (A, B, C, D, F).
+
+## Identifying Data Quality Issues
+
+1.  **Missing Values (NA):**
+
+    *   Let's check for missing values in the `score` column:
+
+```{r}
+    library(tidyverse)
+
+    exam_scores <- read.csv("https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv")
+
+    sum(is.na(exam_scores))
+```
+
+>*cleaning the NAs*
+
+```{r}
+#Remove NA values in Exam Scores
+exam_scores <- na.omit(exam_scores)
+exam_scores
+```
+
+
+2.  **Outliers:**
+
+    *   Let's identify potential outliers in the `study_hours` column using a boxplot:
+
+    ```{r}
+    ggplot(exam_scores, aes(y = study_hours)) +
+      geom_boxplot() +
+      labs(title = "Boxplot of Study Hours")
+    ```
+
+    *   We can then calculate the IQR and identify values outside the typical range:
+
+    ```{r}
+    Q1 <- quantile(exam_scores$study_hours, 0.25)
+    Q3 <- quantile(exam_scores$study_hours, 0.75)
+    IQR <- Q3 - Q1
+
+    lower_bound <- Q1 - 1.5 * IQR
+    upper_bound <- Q3 + 1.5 * IQR
+
+    outliers <- exam_scores %>%
+      filter(study_hours < lower_bound | study_hours > upper_bound)
+
+    print(outliers)
+    ```
+
+3.  **Inconsistent Data:**
+
+    *   Let's check for inconsistent grade entries (e.g., lowercase "a" instead of uppercase "A"):
+
+    ```{r}
+    unique(exam_scores$grade) #See if the dataset has what you expect
+    ```
+
+## Handling Missing Values
+
+1.  **Removal:** Let's remove rows where the exam score is NA.
+
+    ```{r}
+    exam_scores_no_na <- exam_scores %>%
+      filter(!is.na(score))
+    ```
+
+2.  **Imputation:** We can use a simple `ifelse` statement to impute with the mean.
+
+    *   Mean/Median Imputation: Replace with the mean or median of the column.
+
+    ```{r}
+    exam_scores <- exam_scores %>%
+      mutate(score = ifelse(is.na(score), mean(score, na.rm = TRUE), score))
+    ```
+
+## Handling Outliers
+
+We can handle those extreme scores to help reduce the variability of the dataset.
+
+1.  **Capping (Winsorizing):**
+
+    ```{r}
+    # Cap values above the 95th percentile for study hours.
+    upper_threshold <- quantile(exam_scores$study_hours, 0.95)
+    exam_scores <- exam_scores %>%
+      mutate(study_hours = ifelse(study_hours > upper_threshold, upper_threshold, study_hours))
+    print(exam_scores)
+    ```
+
+## Correcting Inconsistent Data
+
+Text Cleaning:
+Let's apply some cleaning techniques to ensure the dataset is formatted as best as possible.
+
+```{r}
+    library(stringr)
+
+    exam_scores <- exam_scores %>%
+      mutate(grade = str_to_upper(grade))
+
+    print(unique(exam_scores$grade)) #Check if things are good now!
+```
+
