@@ -2,7 +2,7 @@ student_id,study_hours,score,grade
 1,2,65,C
 2,5,88,B
 3,1,52,F
-4,3,76,C
+4,3,76,c
 5,4,82,B
 6,2,70,C
 7,6,95,A
@@ -11,7 +11,7 @@ student_id,study_hours,score,grade
 10,4.5,85,B
 11,2.5,73,C
 12,5.5,91,A
-13,0.5,45,F
+13,0.5,45,f
 14,3,77,C
 15,4,83,B
 16,2,68,C
