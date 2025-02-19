@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE,warning = FALSE)
 ```{r}
 # loading the .csv file containing data
 
-df=read.csv("https://raw.githubusercontent.com/sijuswamy/Data-Analytics-using-R/main/Survey_Data.csv.csv",header = TRUE)
+df=read.csv("https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/survey_data.csv",header = TRUE)
 df=df[,-1]
 size=nrow(df)
 #df
@@ -45,8 +45,7 @@ Since the column titles obtained through the *Google forms* are the questions gi
 In this article, the later approach is demonstrated.
 
 ```{r}
-colnames(df) <- c("Gender","Age","Weight","Orange","Grapes","Banana","Apple","Mango","Cherry","Height")
-#df
+colnames(df) <- c("Gender","Age","Weight","Height","Orange","Grapes","Banana","Apple","Mango","Cherry")
 ```
 
 ## Descriptive Analysis
@@ -99,7 +98,7 @@ library(reshape2)
 library(plyr)
 data_long <- melt(df,
         # ID variables - all the variables to keep but not split apart on
-    id.vars=c("Gender","Age","Weight","Height","Age_group"),
+    id.vars=c("Gender","Age","Weight","Age_group","Height"),
         # The source columns
     measure.vars=c("Orange", "Grapes", "Banana","Apple","Mango","Cherry" ),
         # Name of the destination column that will identify the original
@@ -175,39 +174,29 @@ A percentage analysis of gender-wise preference of various fruits is given in th
 
 
 ```{r}
-#gender-wise
 library(dplyr)
 library(ggplot2)
 
-df %>%
-  count(Grapes,Gender) %>%       
-  group_by(Grapes) %>%
-  mutate(pct= prop.table(n) * 100) %>%
-  ggplot() + aes(Grapes, pct, fill=Gender) +
-  geom_bar(stat="identity") +
-  ylab("Number of respondents") +
-  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
-            position=position_stack(vjust=0.5)) +labs(x ="Grapes", y = "Percentage",fill="Gender")+
-  theme_bw()
-```
+# Ensure 'Grapes' is treated as a factor
+df$Grapes <- as.factor(df$Grapes)
+df$Gender <- as.factor(df$Gender)
 
-
-
-```{r}
-#gender-wise
-library(dplyr)
-library(ggplot2)
-
-df %>%
-  count(Orange,Gender) %>%       
-  group_by(Orange) %>%
-  mutate(pct= prop.table(n) * 100) %>%
-  ggplot() + aes(Orange, pct, fill=Gender) +
-  geom_bar(stat="identity") +
-  ylab("Number of respondents") +
-  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
-            position=position_stack(vjust=0.5)) +labs(x ="Orange", y = "Percentage",fill="Gender")+
-  theme_bw()
+# Check if the column 'Grapes' exists
+if ("Grapes" %in% colnames(df)) {
+  df %>%
+    dplyr::count(Grapes, Gender) %>%
+    group_by(Grapes) %>%
+    mutate(pct = prop.table(n) * 100) %>%
+    ggplot(aes(Grapes, pct, fill = Gender)) +
+    geom_bar(stat = "identity") +
+    ylab("Number of respondents") +
+    geom_text(aes(label = paste0(sprintf("%1.1f", pct), "%")),
+              position = position_stack(vjust = 0.5)) +
+    labs(x = "Grapes", y = "Percentage", fill = "Gender") +
+    theme_bw()
+} else {
+  print("Column 'Grapes' not found in the data frame.")
+}
 ```
 
 ```{r}
@@ -216,24 +205,7 @@ library(dplyr)
 library(ggplot2)
 
 df %>%
-  count(Apple,Gender) %>%       
-  group_by(Apple) %>%
-  mutate(pct= prop.table(n) * 100) %>%
-  ggplot() + aes(Apple, pct, fill=Gender) +
-  geom_bar(stat="identity") +
-  ylab("Number of respondents") +
-  geom_text(aes(label=paste0(sprintf("%1.1f", pct),"%")),
-            position=position_stack(vjust=0.5)) +labs(x ="Apple", y = "Percentage",fill="Gender")+
-  theme_bw()
-```
-
-```{r}
-#gender-wise
-library(dplyr)
-library(ggplot2)
-
-df %>%
-  count(Mango,Gender) %>%       
+  dplyr::count(Mango,Gender) %>%       
   group_by(Mango) %>%
   mutate(pct= prop.table(n) * 100) %>%
   ggplot() + aes(Mango, pct, fill=Gender) +
@@ -250,7 +222,7 @@ library(dplyr)
 library(ggplot2)
 
 df %>%
-  count(Banana,Gender) %>%       
+  dplyr::count(Banana,Gender) %>%       
   group_by(Banana) %>%
   mutate(pct= prop.table(n) * 100) %>%
   ggplot() + aes(Banana, pct, fill=Gender) +
@@ -277,7 +249,7 @@ library(dplyr)
 library(ggplot2)
 
 data_long%>%
-  count(Fruit,Rating) %>%       
+  dplyr::count(Fruit,Rating) %>%       
   group_by(Fruit) %>%
   mutate(pct= prop.table(n) * 100) %>%
   ggplot() + aes(Fruit, pct, fill=Rating) +
@@ -296,7 +268,7 @@ data_long%>%
 ```{r}
 library(dplyr)
 Fa=group_by(df, Gender) %>%
-  summarise(
+  dplyr::summarise(
     count = n(),
     mean =round( mean(Weight, na.rm = TRUE),2),
     sd = round(sd(Weight, na.rm = TRUE),2)
@@ -310,7 +282,7 @@ knitr::kable(Fa)
 ```{r}
 library(dplyr)
 Fa=group_by(df, Gender) %>%
-  summarise(
+  dplyr::summarise(
     count = n(),
     mean =round( mean(Height, na.rm = TRUE),2),
     sd = round(sd(Height, na.rm = TRUE),2)
@@ -325,7 +297,7 @@ knitr::kable(Fa)
 ```{r}
 library(dplyr)
 Fa=group_by(df, Age_group) %>%
-  summarise(
+  dplyr::summarise(
     count = n(),
     mean =round( mean(Height, na.rm = TRUE),2),
     sd = round(sd(Height, na.rm = TRUE),2)
@@ -335,7 +307,7 @@ knitr::kable(Fa)
 ```{r}
 library(dplyr)
 Fa=group_by(df, Gender) %>%
-  summarise(
+  dplyr::summarise(
     count = n(),
     mean =round( mean(Age, na.rm = TRUE),2),
     sd = round(sd(Age, na.rm = TRUE),2)
@@ -349,7 +321,7 @@ knitr::kable(Fa)
 df$Orange <- factor(df$Orange, 
                   levels = c("not at all","if no other fruits available","some what","seasonally","my favorite"),
                   labels = c("1","2","3","4","5"))
-head(df)
+#head(df)
 ```
 
 ```{r}
