@@ -3,8 +3,8 @@ project:
 
 book:
   title: "R for Data Analytics"
-  author: "Norah Jones"
-  date: "19/2/2025"
+  author: "Siju Swamy"
+  date: "2/19/2025"
   chapters:
     - index.qmd
     - intro.qmd
