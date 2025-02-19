@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lesson, we'll delve into the world of descriptive statistics. Descriptive statistics provide a summary of your data, allowing you to understand its central tendency, variability, and shape. We'll learn how to calculate common descriptive statistics in R and interpret their meaning.
+In this section, we'll delve into the world of descriptive statistics. Descriptive statistics provide a summary of your data, allowing you to understand its central tendency, variability, and shape. We'll learn how to calculate common descriptive statistics in R and interpret their meaning.
 
 ## Learning Objectives
 

@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome"><span class="header-section-number">7.1</span> Welcome!</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">7.1</span> Introduction</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">7.2</span> Learning Objectives</a></li>
   <li><a href="#what-is-a-statistical-test" id="toc-what-is-a-statistical-test" class="nav-link" data-scroll-target="#what-is-a-statistical-test"><span class="header-section-number">7.3</span> What is a statistical test?</a>
   <ul class="collapse">
@@ -232,9 +232,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="welcome" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="welcome"><span class="header-section-number">7.1</span> Welcome!</h2>
-<p>In this lesson, we will cover statistical methods used for evaluating data and validating hypotheses. Knowing the different types of statistical tests to perform will be critical for your own dataset.</p>
+<section id="introduction" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">7.1</span> Introduction</h2>
+<p>In this section, we will cover statistical methods used for evaluating data and validating hypotheses. Knowing the different types of statistical tests to perform will be critical for your own dataset.</p>
 </section>
 <section id="learning-objectives" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">7.2</span> Learning Objectives</h2>
@@ -271,12 +271,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(population_norm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     value          
- Min.   :-4.862326  
- 1st Qu.:-0.675455  
- Median : 0.000228  
- Mean   : 0.000529  
- 3rd Qu.: 0.676127  
- Max.   : 4.792054  </code></pre>
+ Min.   :-4.735286  
+ 1st Qu.:-0.672984  
+ Median : 0.002029  
+ Mean   : 0.001075  
+ 3rd Qu.: 0.676120  
+ Max.   : 4.642206  </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -305,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     Shapiro-Wilk normality test
 
 data:  population_norm$value[1:5000]
-W = 0.99967, p-value = 0.6191</code></pre>
+W = 0.99978, p-value = 0.9142</code></pre>
 </div>
 </div>
 <p>If the p-value is less than the significance level (alpha) you reject the null hypothesis and it means there is a statistical significance. In this case, reject null. The shapiro test is testing if the data “normal”. But in this case if the test passes it has to be rejected, since it will be testing if data is “non-normal”, thus the need to invert the value.</p>
@@ -383,8 +383,8 @@ W = 0.99967, p-value = 0.6191</code></pre>
 <pre><code># A tibble: 2 × 2
   group mean_value
   &lt;chr&gt;      &lt;dbl&gt;
-1 A          0.249
-2 B          0.503</code></pre>
+1 A         -0.203
+2 B          0.225</code></pre>
 </div>
 </div>
 <p>Perform t Test. Note, that for this particular function, you will need at least 2 variable.</p>
@@ -395,13 +395,13 @@ W = 0.99967, p-value = 0.6191</code></pre>
     Welch Two Sample t-test
 
 data:  value by group
-t = -1.2349, df = 96.216, p-value = 0.2199
+t = -2.0876, df = 97.981, p-value = 0.03943
 alternative hypothesis: true difference in means between group A and group B is not equal to 0
 95 percent confidence interval:
- -0.6605128  0.1538584
+ -0.8346836 -0.0211347
 sample estimates:
 mean in group A mean in group B 
-      0.2492445       0.5025717 </code></pre>
+     -0.2027496       0.2251595 </code></pre>
 </div>
 </div>
 <p>From here the t-test is the main value to look for, which validates whether the averages are different. The important detail here is the p-value. As mentioned earlier, if the P-Value is less than the alpha, which is typically 0.05, it means that we should reject that distribution.</p>

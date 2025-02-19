@@ -3,7 +3,7 @@
 
 ## Welcome!
 
-This lesson will get you up and running with R and RStudio, the tools we'll be using throughout this module. You'll learn how to install the software, explore the RStudio interface, and run your first R commands. We'll also cover the crucial role of version control for all of your projects.
+This session will get you up and running with R and RStudio, the tools we'll be using throughout this module. You'll learn how to install the software, explore the RStudio interface, and run your first R commands. We'll also cover the crucial role of version control for all of your projects.
 
 ## Learning Objectives
 

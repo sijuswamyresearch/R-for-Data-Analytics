@@ -3,7 +3,7 @@
 
 ## Visualizing a Single Variable
 
-In this lesson, we will delve into the techniques for visualizing a single variable, which is a fundamental aspect of exploratory data analysis (EDA). Understanding the distribution and characteristics of individual variables is crucial before exploring relationships between multiple variables.
+In this section, we will delve into the techniques for visualizing a single variable, which is a fundamental aspect of exploratory data analysis (EDA). Understanding the distribution and characteristics of individual variables is crucial before exploring relationships between multiple variables.
 
 ## Introduction to Visualizing a Single Variable
 

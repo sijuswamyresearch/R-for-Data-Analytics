@@ -1,12 +1,8 @@
 # Statistical Methods for Evaluation
 
----
-title: Statistical Methods for Evaluation
----
+## Introduction
 
-## Welcome!
-
-In this lesson, we will cover statistical methods used for evaluating data and validating hypotheses. Knowing the different types of statistical tests to perform will be critical for your own dataset.
+In this section, we will cover statistical methods used for evaluating data and validating hypotheses. Knowing the different types of statistical tests to perform will be critical for your own dataset.
 
 ## Learning Objectives
 

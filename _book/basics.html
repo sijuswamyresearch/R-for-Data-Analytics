@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -176,6 +196,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualization-vs-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Exploration Versus Presentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statistical-methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistical Methods for Evaluation</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -186,33 +218,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#running-basic-r-commands" id="toc-running-basic-r-commands" class="nav-link active" data-scroll-target="#running-basic-r-commands"><span class="header-section-number">2.1</span> Running Basic R Commands</a></li>
-  <li><a href="#installing-and-loading-packages" id="toc-installing-and-loading-packages" class="nav-link" data-scroll-target="#installing-and-loading-packages"><span class="header-section-number">2.2</span> Installing and Loading Packages</a></li>
-  <li><a href="#downloading-sample-data" id="toc-downloading-sample-data" class="nav-link" data-scroll-target="#downloading-sample-data"><span class="header-section-number">2.3</span> Downloading Sample Data</a></li>
-  <li><a href="#inspecting-data" id="toc-inspecting-data" class="nav-link" data-scroll-target="#inspecting-data"><span class="header-section-number">2.4</span> Inspecting Data</a></li>
-  <li><a href="#data-input-and-data-types" id="toc-data-input-and-data-types" class="nav-link" data-scroll-target="#data-input-and-data-types"><span class="header-section-number">2.5</span> Data Input and Data Types</a>
+  <li><a href="#installing-and-loading-packages" id="toc-installing-and-loading-packages" class="nav-link active" data-scroll-target="#installing-and-loading-packages"><span class="header-section-number">2.1</span> Installing and Loading Packages</a></li>
+  <li><a href="#downloading-sample-data" id="toc-downloading-sample-data" class="nav-link" data-scroll-target="#downloading-sample-data"><span class="header-section-number">2.2</span> Downloading Sample Data</a></li>
+  <li><a href="#inspecting-data" id="toc-inspecting-data" class="nav-link" data-scroll-target="#inspecting-data"><span class="header-section-number">2.3</span> Inspecting Data</a></li>
+  <li><a href="#data-input-and-data-types" id="toc-data-input-and-data-types" class="nav-link" data-scroll-target="#data-input-and-data-types"><span class="header-section-number">2.4</span> Data Input and Data Types</a>
   <ul class="collapse">
-  <li><a href="#data-types-in-r" id="toc-data-types-in-r" class="nav-link" data-scroll-target="#data-types-in-r"><span class="header-section-number">2.5.1</span> Data Types in R</a></li>
-  <li><a href="#checking-data-types" id="toc-checking-data-types" class="nav-link" data-scroll-target="#checking-data-types"><span class="header-section-number">2.5.2</span> Checking Data Types</a></li>
-  <li><a href="#converting-data-types" id="toc-converting-data-types" class="nav-link" data-scroll-target="#converting-data-types"><span class="header-section-number">2.5.3</span> Converting Data Types</a></li>
+  <li><a href="#data-types-in-r" id="toc-data-types-in-r" class="nav-link" data-scroll-target="#data-types-in-r"><span class="header-section-number">2.4.1</span> Data Types in R</a></li>
+  <li><a href="#checking-data-types" id="toc-checking-data-types" class="nav-link" data-scroll-target="#checking-data-types"><span class="header-section-number">2.4.2</span> Checking Data Types</a></li>
+  <li><a href="#converting-data-types" id="toc-converting-data-types" class="nav-link" data-scroll-target="#converting-data-types"><span class="header-section-number">2.4.3</span> Converting Data Types</a></li>
   </ul></li>
-  <li><a href="#lists-arrays-and-data-frames-in-r" id="toc-lists-arrays-and-data-frames-in-r" class="nav-link" data-scroll-target="#lists-arrays-and-data-frames-in-r"><span class="header-section-number">2.6</span> Lists, Arrays, and Data Frames in R</a></li>
-  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">2.7</span> 1. Lists</a>
+  <li><a href="#lists-arrays-and-data-frames-in-r" id="toc-lists-arrays-and-data-frames-in-r" class="nav-link" data-scroll-target="#lists-arrays-and-data-frames-in-r"><span class="header-section-number">2.5</span> Lists, Arrays, and Data Frames in R</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">2.6</span> 1. Lists</a>
   <ul class="collapse">
-  <li><a href="#creating-lists" id="toc-creating-lists" class="nav-link" data-scroll-target="#creating-lists"><span class="header-section-number">2.7.1</span> Creating Lists</a></li>
-  <li><a href="#accessing-list-elements" id="toc-accessing-list-elements" class="nav-link" data-scroll-target="#accessing-list-elements"><span class="header-section-number">2.7.2</span> Accessing List Elements</a></li>
-  <li><a href="#modifying-lists" id="toc-modifying-lists" class="nav-link" data-scroll-target="#modifying-lists"><span class="header-section-number">2.7.3</span> Modifying Lists</a></li>
+  <li><a href="#creating-lists" id="toc-creating-lists" class="nav-link" data-scroll-target="#creating-lists"><span class="header-section-number">2.6.1</span> Creating Lists</a></li>
+  <li><a href="#accessing-list-elements" id="toc-accessing-list-elements" class="nav-link" data-scroll-target="#accessing-list-elements"><span class="header-section-number">2.6.2</span> Accessing List Elements</a></li>
+  <li><a href="#modifying-lists" id="toc-modifying-lists" class="nav-link" data-scroll-target="#modifying-lists"><span class="header-section-number">2.6.3</span> Modifying Lists</a></li>
   </ul></li>
-  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays"><span class="header-section-number">2.8</span> 2. Arrays</a>
+  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays"><span class="header-section-number">2.7</span> 2. Arrays</a>
   <ul class="collapse">
-  <li><a href="#creating-arrays" id="toc-creating-arrays" class="nav-link" data-scroll-target="#creating-arrays"><span class="header-section-number">2.8.1</span> Creating Arrays</a></li>
-  <li><a href="#array-operations" id="toc-array-operations" class="nav-link" data-scroll-target="#array-operations"><span class="header-section-number">2.8.2</span> Array Operations</a></li>
+  <li><a href="#creating-arrays" id="toc-creating-arrays" class="nav-link" data-scroll-target="#creating-arrays"><span class="header-section-number">2.7.1</span> Creating Arrays</a></li>
+  <li><a href="#array-operations" id="toc-array-operations" class="nav-link" data-scroll-target="#array-operations"><span class="header-section-number">2.7.2</span> Array Operations</a></li>
   </ul></li>
-  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="header-section-number">2.9</span> 3. Data Frames</a>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="header-section-number">2.8</span> 3. Data Frames</a>
   <ul class="collapse">
-  <li><a href="#accessing-data-frame-elements" id="toc-accessing-data-frame-elements" class="nav-link" data-scroll-target="#accessing-data-frame-elements"><span class="header-section-number">2.9.1</span> Accessing Data Frame Elements</a></li>
-  <li><a href="#modifying-data-frames" id="toc-modifying-data-frames" class="nav-link" data-scroll-target="#modifying-data-frames"><span class="header-section-number">2.9.2</span> Modifying Data Frames</a></li>
-  <li><a href="#data-frame-operations" id="toc-data-frame-operations" class="nav-link" data-scroll-target="#data-frame-operations"><span class="header-section-number">2.9.3</span> Data Frame Operations</a></li>
+  <li><a href="#accessing-data-frame-elements" id="toc-accessing-data-frame-elements" class="nav-link" data-scroll-target="#accessing-data-frame-elements"><span class="header-section-number">2.8.1</span> Accessing Data Frame Elements</a></li>
+  <li><a href="#modifying-data-frames" id="toc-modifying-data-frames" class="nav-link" data-scroll-target="#modifying-data-frames"><span class="header-section-number">2.8.2</span> Modifying Data Frames</a></li>
+  <li><a href="#data-frame-operations" id="toc-data-frame-operations" class="nav-link" data-scroll-target="#data-frame-operations"><span class="header-section-number">2.8.3</span> Data Frame Operations</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -239,8 +270,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="running-basic-r-commands" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="running-basic-r-commands"><span class="header-section-number">2.1</span> Running Basic R Commands</h2>
+<blockquote class="blockquote">
+<p><em>Reference:</em> <span class="citation" data-cites="kabacoff2022r">Kabacoff (<a href="#ref-kabacoff2022r" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="mayor2015learning">Mayor (<a href="#ref-mayor2015learning" role="doc-biblioref">2015</a>)</span>. ## Running Basic R Commands</p>
+</blockquote>
 <ol type="1">
 <li><p><strong>In the Console panel:</strong> Type the following commands and press Enter after each one:</p>
 <div class="cell">
@@ -267,9 +299,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The commands in the script will be executed in the console.</li>
 </ul></li>
 </ol>
-</section>
-<section id="installing-and-loading-packages" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="installing-and-loading-packages"><span class="header-section-number">2.2</span> Installing and Loading Packages</h2>
+<section id="installing-and-loading-packages" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="installing-and-loading-packages"><span class="header-section-number">2.1</span> Installing and Loading Packages</h2>
 <p>R packages are collections of functions, data, and documentation that extend the capabilities of R. The <code>tidyverse</code> package is a collection of popular packages for data science.</p>
 <ol type="1">
 <li><p><strong>Install the <code>tidyverse</code> package:</strong> In the Console, type the following command and press Enter:</p>
@@ -280,15 +311,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This loads the <code>tidyverse</code> package into your R session, making its functions available for use.</p></li>
 </ol>
 </section>
-<section id="downloading-sample-data" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="downloading-sample-data"><span class="header-section-number">2.3</span> Downloading Sample Data</h2>
+<section id="downloading-sample-data" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="downloading-sample-data"><span class="header-section-number">2.2</span> Downloading Sample Data</h2>
 <p>We’ll use a sample CSV file for demonstration.</p>
 <ul>
 <li><strong>Download the <code>exam_scores.csv</code> file</strong> from the course materials to your data directory. You can also copy this link for downloading directly into R.: <a href="https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv">Sample CSV Data</a></li>
 </ul>
 </section>
-<section id="inspecting-data" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="inspecting-data"><span class="header-section-number">2.4</span> Inspecting Data</h2>
+<section id="inspecting-data" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="inspecting-data"><span class="header-section-number">2.3</span> Inspecting Data</h2>
 <p>Now, let’s read the <code>exam_scores.csv</code> file into R and inspect it:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Replace this link with your actual link to your data.</span></span>
@@ -308,10 +339,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="data-input-and-data-types" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="data-input-and-data-types"><span class="header-section-number">2.5</span> Data Input and Data Types</h2>
-<section id="data-types-in-r" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="data-types-in-r"><span class="header-section-number">2.5.1</span> Data Types in R</h3>
+<section id="data-input-and-data-types" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="data-input-and-data-types"><span class="header-section-number">2.4</span> Data Input and Data Types</h2>
+<section id="data-types-in-r" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="data-types-in-r"><span class="header-section-number">2.4.1</span> Data Types in R</h3>
 <p>R supports several fundamental data types:</p>
 <ol type="1">
 <li><strong>Numeric:</strong> Numbers (e.g., <code>1</code>, <code>3.14</code>, <code>-2.5</code>).</li>
@@ -321,8 +352,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Date:</strong> Dates and times (e.g., <code>"2023-10-27"</code>).</li>
 </ol>
 </section>
-<section id="checking-data-types" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="checking-data-types"><span class="header-section-number">2.5.2</span> Checking Data Types</h3>
+<section id="checking-data-types" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="checking-data-types"><span class="header-section-number">2.4.2</span> Checking Data Types</h3>
 <p>The <code>class()</code> function tells you the data type of a variable:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
@@ -337,8 +368,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="converting-data-types" class="level3" data-number="2.5.3">
-<h3 data-number="2.5.3" class="anchored" data-anchor-id="converting-data-types"><span class="header-section-number">2.5.3</span> Converting Data Types</h3>
+<section id="converting-data-types" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="converting-data-types"><span class="header-section-number">2.4.3</span> Converting Data Types</h3>
 <p>You can convert between data types using the <code>as.*()</code> functions:</p>
 <pre><code>as.numeric()
 
@@ -380,17 +411,17 @@ Important Note:
 </div>
 </section>
 </section>
-<section id="lists-arrays-and-data-frames-in-r" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="lists-arrays-and-data-frames-in-r"><span class="header-section-number">2.6</span> Lists, Arrays, and Data Frames in R</h2>
+<section id="lists-arrays-and-data-frames-in-r" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="lists-arrays-and-data-frames-in-r"><span class="header-section-number">2.5</span> Lists, Arrays, and Data Frames in R</h2>
 </section>
-<section id="lists" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="lists"><span class="header-section-number">2.7</span> 1. Lists</h2>
+<section id="lists" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="lists"><span class="header-section-number">2.6</span> 1. Lists</h2>
 <p>Lists are versatile data structures that can hold elements of different types. A list can contain numbers, strings, vectors, arrays, or even other lists.</p>
-<section id="creating-lists" class="level3" data-number="2.7.1">
-<h3 data-number="2.7.1" class="anchored" data-anchor-id="creating-lists"><span class="header-section-number">2.7.1</span> Creating Lists</h3>
+<section id="creating-lists" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="creating-lists"><span class="header-section-number">2.6.1</span> Creating Lists</h3>
 <p>You can create a list using the <code>list()</code> function.</p>
-<section id="example-1-creating-a-simple-list" class="level4" data-number="2.7.1.1">
-<h4 data-number="2.7.1.1" class="anchored" data-anchor-id="example-1-creating-a-simple-list"><span class="header-section-number">2.7.1.1</span> Example 1: Creating a Simple List</h4>
+<section id="example-1-creating-a-simple-list" class="level4" data-number="2.6.1.1">
+<h4 data-number="2.6.1.1" class="anchored" data-anchor-id="example-1-creating-a-simple-list"><span class="header-section-number">2.6.1.1</span> Example 1: Creating a Simple List</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a simple list</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">name =</span> <span class="st">"John"</span>, <span class="at">age =</span> <span class="dv">30</span>, <span class="at">grades =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>))</span>
@@ -408,11 +439,11 @@ $grades
 </div>
 </section>
 </section>
-<section id="accessing-list-elements" class="level3" data-number="2.7.2">
-<h3 data-number="2.7.2" class="anchored" data-anchor-id="accessing-list-elements"><span class="header-section-number">2.7.2</span> Accessing List Elements</h3>
+<section id="accessing-list-elements" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="accessing-list-elements"><span class="header-section-number">2.6.2</span> Accessing List Elements</h3>
 <p>You can access list elements using their names or indices.</p>
-<section id="example-2-accessing-list-elements-by-name" class="level4" data-number="2.7.2.1">
-<h4 data-number="2.7.2.1" class="anchored" data-anchor-id="example-2-accessing-list-elements-by-name"><span class="header-section-number">2.7.2.1</span> Example 2: Accessing List Elements by Name</h4>
+<section id="example-2-accessing-list-elements-by-name" class="level4" data-number="2.6.2.1">
+<h4 data-number="2.6.2.1" class="anchored" data-anchor-id="example-2-accessing-list-elements-by-name"><span class="header-section-number">2.6.2.1</span> Example 2: Accessing List Elements by Name</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accessing list elements by name</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> my_list<span class="sc">$</span>name</span>
@@ -427,8 +458,8 @@ $grades
 </div>
 </div>
 </section>
-<section id="example-3-accessing-list-elements-by-index" class="level4" data-number="2.7.2.2">
-<h4 data-number="2.7.2.2" class="anchored" data-anchor-id="example-3-accessing-list-elements-by-index"><span class="header-section-number">2.7.2.2</span> Example 3: Accessing List Elements by Index</h4>
+<section id="example-3-accessing-list-elements-by-index" class="level4" data-number="2.6.2.2">
+<h4 data-number="2.6.2.2" class="anchored" data-anchor-id="example-3-accessing-list-elements-by-index"><span class="header-section-number">2.6.2.2</span> Example 3: Accessing List Elements by Index</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accessing list elements by index</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> my_list[[<span class="dv">1</span>]]</span>
@@ -444,8 +475,8 @@ $grades
 </div>
 </section>
 </section>
-<section id="modifying-lists" class="level3" data-number="2.7.3">
-<h3 data-number="2.7.3" class="anchored" data-anchor-id="modifying-lists"><span class="header-section-number">2.7.3</span> Modifying Lists</h3>
+<section id="modifying-lists" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="modifying-lists"><span class="header-section-number">2.6.3</span> Modifying Lists</h3>
 <p>You can modify lists by adding, updating, or deleting elements.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding elements to a list</span></span>
@@ -500,11 +531,11 @@ $city
 </div>
 </section>
 </section>
-<section id="arrays" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="arrays"><span class="header-section-number">2.8</span> 2. Arrays</h2>
+<section id="arrays" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="arrays"><span class="header-section-number">2.7</span> 2. Arrays</h2>
 <p>Arrays are data structures that can hold elements of the same type in multiple dimensions.</p>
-<section id="creating-arrays" class="level3" data-number="2.8.1">
-<h3 data-number="2.8.1" class="anchored" data-anchor-id="creating-arrays"><span class="header-section-number">2.8.1</span> Creating Arrays</h3>
+<section id="creating-arrays" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="creating-arrays"><span class="header-section-number">2.7.1</span> Creating Arrays</h3>
 <p>You can create an array using the <code>array()</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#one dimensional array</span></span>
@@ -590,8 +621,8 @@ $city
 </div>
 </div>
 </section>
-<section id="array-operations" class="level3" data-number="2.8.2">
-<h3 data-number="2.8.2" class="anchored" data-anchor-id="array-operations"><span class="header-section-number">2.8.2</span> Array Operations</h3>
+<section id="array-operations" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="array-operations"><span class="header-section-number">2.7.2</span> Array Operations</h3>
 <p>You can perform various operations on arrays, such as transposing and performing arithmetic operations.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transposing a matrix</span></span>
@@ -620,8 +651,8 @@ $city
 </div>
 </section>
 </section>
-<section id="data-frames" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="data-frames"><span class="header-section-number">2.9</span> 3. Data Frames</h2>
+<section id="data-frames" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="data-frames"><span class="header-section-number">2.8</span> 3. Data Frames</h2>
 <p>Data frames are table-like data structures that organize data into rows and columns. Each column can hold data of a different type.</p>
 <p>You can create a data frame using the <code>data.frame()</code> function.</p>
 <div class="cell">
@@ -640,8 +671,8 @@ $city
 3  3 Charlie  28    78</code></pre>
 </div>
 </div>
-<section id="accessing-data-frame-elements" class="level3" data-number="2.9.1">
-<h3 data-number="2.9.1" class="anchored" data-anchor-id="accessing-data-frame-elements"><span class="header-section-number">2.9.1</span> Accessing Data Frame Elements</h3>
+<section id="accessing-data-frame-elements" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="accessing-data-frame-elements"><span class="header-section-number">2.8.1</span> Accessing Data Frame Elements</h3>
 <p>You can access data frame elements using their column names or indices.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accessing data frame columns by name</span></span>
@@ -657,8 +688,8 @@ $city
 </div>
 </div>
 </section>
-<section id="modifying-data-frames" class="level3" data-number="2.9.2">
-<h3 data-number="2.9.2" class="anchored" data-anchor-id="modifying-data-frames"><span class="header-section-number">2.9.2</span> Modifying Data Frames</h3>
+<section id="modifying-data-frames" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="modifying-data-frames"><span class="header-section-number">2.8.2</span> Modifying Data Frames</h3>
 <p>You can modify data frames by adding, updating, or deleting columns and rows.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding a column to a data frame</span></span>
@@ -731,8 +762,8 @@ $city
 </div>
 </div>
 </section>
-<section id="data-frame-operations" class="level3" data-number="2.9.3">
-<h3 data-number="2.9.3" class="anchored" data-anchor-id="data-frame-operations"><span class="header-section-number">2.9.3</span> Data Frame Operations</h3>
+<section id="data-frame-operations" class="level3" data-number="2.8.3">
+<h3 data-number="2.8.3" class="anchored" data-anchor-id="data-frame-operations"><span class="header-section-number">2.8.3</span> Data Frame Operations</h3>
 <p>You can perform various operations on data frames, such as subsetting, filtering, sorting, and merging.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subsetting data frames</span></span>
@@ -767,6 +798,14 @@ $city
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kabacoff2022r" class="csl-entry" role="listitem">
+Kabacoff, Robert. 2022. <em>R in Action: Data Analysis and Graphics with r and Tidyverse</em>. Simon; Schuster.
+</div>
+<div id="ref-mayor2015learning" class="csl-entry" role="listitem">
+Mayor, Eric. 2015. <em>Learning Predictive Analytics with r</em>. Packt Publishing Ltd.
+</div>
+</div>
 </section>
 </section>
 

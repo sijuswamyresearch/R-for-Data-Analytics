@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Descriptive Statistics – R for Data Analytics</title>
+<title>4&nbsp; Descriptive Statistics – R for Data Analytics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./EDA.html" rel="next">
-<link href="./basics.html" rel="prev">
+<link href="./data-cleaning.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./descriptive-statistics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./descriptive-statistics.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,14 +160,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./data-cleaning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Cleaning and Transformation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./descriptive-statistics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EDA.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis: Bivariate</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualization-vs-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Exploration Versus Presentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statistical-methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistical Methods for Evaluation</span></span></a>
   </div>
 </li>
     </ul>
@@ -180,16 +198,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">3.1</span> Introduction</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">3.2</span> Learning Objectives</a></li>
-  <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency"><span class="header-section-number">3.3</span> Measures of Central Tendency</a></li>
-  <li><a href="#measures-of-dispersion" id="toc-measures-of-dispersion" class="nav-link" data-scroll-target="#measures-of-dispersion"><span class="header-section-number">3.4</span> Measures of Dispersion</a></li>
-  <li><a href="#descriptive-statistics-with-dplyrsummarize" id="toc-descriptive-statistics-with-dplyrsummarize" class="nav-link" data-scroll-target="#descriptive-statistics-with-dplyrsummarize"><span class="header-section-number">3.5</span> Descriptive Statistics with <code>dplyr::summarize()</code></a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">4.1</span> Introduction</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">4.2</span> Learning Objectives</a></li>
+  <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency"><span class="header-section-number">4.3</span> Measures of Central Tendency</a></li>
+  <li><a href="#measures-of-dispersion" id="toc-measures-of-dispersion" class="nav-link" data-scroll-target="#measures-of-dispersion"><span class="header-section-number">4.4</span> Measures of Dispersion</a></li>
+  <li><a href="#descriptive-statistics-with-dplyrsummarize" id="toc-descriptive-statistics-with-dplyrsummarize" class="nav-link" data-scroll-target="#descriptive-statistics-with-dplyrsummarize"><span class="header-section-number">4.5</span> Descriptive Statistics with <code>dplyr::summarize()</code></a>
   <ul class="collapse">
-  <li><a href="#grouped-descriptive-statistics" id="toc-grouped-descriptive-statistics" class="nav-link" data-scroll-target="#grouped-descriptive-statistics"><span class="header-section-number">3.5.1</span> Grouped Descriptive Statistics</a></li>
+  <li><a href="#grouped-descriptive-statistics" id="toc-grouped-descriptive-statistics" class="nav-link" data-scroll-target="#grouped-descriptive-statistics"><span class="header-section-number">4.5.1</span> Grouped Descriptive Statistics</a></li>
   </ul></li>
-  <li><a href="#descriptive-statistics-and-data-distribution" id="toc-descriptive-statistics-and-data-distribution" class="nav-link" data-scroll-target="#descriptive-statistics-and-data-distribution"><span class="header-section-number">3.6</span> Descriptive Statistics and Data Distribution</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice"><span class="header-section-number">3.7</span> Practice</a></li>
+  <li><a href="#descriptive-statistics-and-data-distribution" id="toc-descriptive-statistics-and-data-distribution" class="nav-link" data-scroll-target="#descriptive-statistics-and-data-distribution"><span class="header-section-number">4.6</span> Descriptive Statistics and Data Distribution</a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice"><span class="header-section-number">4.7</span> Practice</a></li>
   </ul>
 </nav>
     </div>
@@ -198,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Descriptive Statistics</span></h1>
 </div>
 
 
@@ -215,12 +233,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
-<p>In this lesson, we’ll delve into the world of descriptive statistics. Descriptive statistics provide a summary of your data, allowing you to understand its central tendency, variability, and shape. We’ll learn how to calculate common descriptive statistics in R and interpret their meaning.</p>
+<section id="introduction" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">4.1</span> Introduction</h2>
+<p>In this section, we’ll delve into the world of descriptive statistics. Descriptive statistics provide a summary of your data, allowing you to understand its central tendency, variability, and shape. We’ll learn how to calculate common descriptive statistics in R and interpret their meaning.</p>
 </section>
-<section id="learning-objectives" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">3.2</span> Learning Objectives</h2>
+<section id="learning-objectives" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">4.2</span> Learning Objectives</h2>
 <ul>
 <li>Calculate measures of central tendency (mean, median, mode).</li>
 <li>Calculate measures of dispersion (standard deviation, variance, IQR, range).</li>
@@ -230,8 +248,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Commit changes to cloud hosted R project with descriptive statistics.</li>
 </ul>
 </section>
-<section id="measures-of-central-tendency" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="measures-of-central-tendency"><span class="header-section-number">3.3</span> Measures of Central Tendency</h2>
+<section id="measures-of-central-tendency" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="measures-of-central-tendency"><span class="header-section-number">4.3</span> Measures of Central Tendency</h2>
 <p>Measures of central tendency describe the “center” of a dataset.</p>
 <ol type="1">
 <li><strong>Mean:</strong> The average of all values.
@@ -279,8 +297,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Mode:</strong> Useful for categorical data or discrete data with repeating values.</li>
 </ul>
 </section>
-<section id="measures-of-dispersion" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="measures-of-dispersion"><span class="header-section-number">3.4</span> Measures of Dispersion</h2>
+<section id="measures-of-dispersion" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="measures-of-dispersion"><span class="header-section-number">4.4</span> Measures of Dispersion</h2>
 <p>Measures of dispersion describe the spread or variability of a dataset.</p>
 <ol type="1">
 <li><p><strong>Standard Deviation:</strong> A measure of how spread out the data is around the mean.</p>
@@ -326,8 +344,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div></li>
 </ol>
 </section>
-<section id="descriptive-statistics-with-dplyrsummarize" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="descriptive-statistics-with-dplyrsummarize"><span class="header-section-number">3.5</span> Descriptive Statistics with <code>dplyr::summarize()</code></h2>
+<section id="descriptive-statistics-with-dplyrsummarize" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="descriptive-statistics-with-dplyrsummarize"><span class="header-section-number">4.5</span> Descriptive Statistics with <code>dplyr::summarize()</code></h2>
 <p>The <code>dplyr</code> package provides the <code>summarize()</code> function, which makes it easy to calculate multiple descriptive statistics at once:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -362,11 +380,11 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  mean_score median_score sd_score iqr_score min_score max_score
-1   75.66667         78.5 14.50168      17.5        45        97</code></pre>
+1   74.33333         78.5 19.38598        21        10       100</code></pre>
 </div>
 </div>
-<section id="grouped-descriptive-statistics" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="grouped-descriptive-statistics"><span class="header-section-number">3.5.1</span> Grouped Descriptive Statistics</h3>
+<section id="grouped-descriptive-statistics" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="grouped-descriptive-statistics"><span class="header-section-number">4.5.1</span> Grouped Descriptive Statistics</h3>
 <p>You can calculate descriptive statistics for different groups within your data using <code>dplyr::group_by()</code> in combination with <code>summarize()</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>exam_scores <span class="sc">%&gt;%</span></span>
@@ -377,19 +395,22 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_score =</span> <span class="fu">sd</span>(score)</span>
 <span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 4
+<pre><code># A tibble: 7 × 4
   grade mean_score median_score sd_score
   &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;    &lt;dbl&gt;
 1 A           94.2         95       2.59
-2 B           84           84       2.74
-3 C           72.9         73.5     4.72
-4 F           52.3         53.5     5.01</code></pre>
+2 B           74.9         83.5    26.3 
+3 C           75.9         74      10.2 
+4 F           53.8         55       3.90
+5 b           87           87      NA   
+6 c           76           76      NA   
+7 f           45           45      NA   </code></pre>
 </div>
 </div>
 </section>
 </section>
-<section id="descriptive-statistics-and-data-distribution" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="descriptive-statistics-and-data-distribution"><span class="header-section-number">3.6</span> Descriptive Statistics and Data Distribution</h2>
+<section id="descriptive-statistics-and-data-distribution" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="descriptive-statistics-and-data-distribution"><span class="header-section-number">4.6</span> Descriptive Statistics and Data Distribution</h2>
 <p>Descriptive statistics provide insights into the distribution of your data:</p>
 <ul>
 <li><strong>Symmetrical Distribution:</strong>
@@ -409,8 +430,8 @@ Attaching package: 'dplyr'</code></pre>
 </ul></li>
 </ul>
 </section>
-<section id="practice" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="practice"><span class="header-section-number">3.7</span> Practice</h2>
+<section id="practice" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="practice"><span class="header-section-number">4.7</span> Practice</h2>
 <ol type="1">
 <li>Load the <code>exam_scores.csv</code> dataset (or your own dataset).</li>
 <li>Calculate the mean, median, standard deviation, IQR, and range for a numerical column.</li>
@@ -845,13 +866,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./basics.html" class="pagination-link" aria-label="Basics of R programming for Data Analysis">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Basics of R programming for Data Analysis</span></span>
+      <a href="./data-cleaning.html" class="pagination-link" aria-label="Data Cleaning and Transformation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Cleaning and Transformation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./EDA.html" class="pagination-link" aria-label="Exploratory Data Analysis: Bivariate">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis: Bivariate</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./EDA.html" class="pagination-link" aria-label="Exploratory Data Analysis">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

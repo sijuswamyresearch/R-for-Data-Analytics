@@ -1,5 +1,6 @@
 # Basics of R programming for Data Analysis
 
+>*Reference:* @kabacoff2022r, @mayor2015learning.
 ## Running Basic R Commands
 
 1.  **In the Console panel:** Type the following commands and press Enter after each one:

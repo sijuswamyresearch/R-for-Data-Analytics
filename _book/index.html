@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Norah Jones">
+<meta name="author" content="Siju Swamy">
+<meta name="dcterms.date" content="2025-02-19">
 
 <title>R for Data Analytics</title>
 <style>
@@ -139,7 +140,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./EDA.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis: Bivariate</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualization-vs-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Exploration Versus Presentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./statistical-methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Statistical Methods for Evaluation</span></span></a>
   </div>
 </li>
     </ul>
@@ -154,6 +167,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul class="collapse">
+  <li><a href="#data-vs.-information" id="toc-data-vs.-information" class="nav-link" data-scroll-target="#data-vs.-information">Data vs.&nbsp;Information</a></li>
   <li><a href="#overview-of-modern-data-analytic-tools" id="toc-overview-of-modern-data-analytic-tools" class="nav-link" data-scroll-target="#overview-of-modern-data-analytic-tools">Overview of Modern Data Analytic Tools</a>
   <ul class="collapse">
   <li><a href="#programming-languages" id="toc-programming-languages" class="nav-link" data-scroll-target="#programming-languages">1. Programming Languages</a></li>
@@ -183,14 +197,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Norah Jones </p>
+             <p>Siju Swamy </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">February 19, 2025</p>
     </div>
   </div>
   
@@ -205,6 +219,105 @@ ul.task-list li input[type="checkbox"] {
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
 <p>Data analysis is a skill for everyone. In this module, we’ll break down the barriers and make R programming accessible and empowering. You don’t need to be a math whiz or a programming expert. We’ll start with the fundamentals and guide you step-by-step as you learn to use R for data exploration, visualization, and analysis. More than just coding, you’ll discover how to think critically about data, ask smart questions, and communicate your insights effectively. This module is your launchpad for a data-driven future!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="qrcode.png" class="img-fluid figure-img"></p>
+<figcaption>Participate in a preference survey</figcaption>
+</figure>
+</div>
+<section id="data-vs.-information" class="level2">
+<h2 class="anchored" data-anchor-id="data-vs.-information">Data vs.&nbsp;Information</h2>
+<p><strong>Data:</strong></p>
+<ul>
+<li><p><strong>Definition:</strong> Data consists of raw, unorganized facts, figures, symbols, and details about people, objects, events, or situations. It can exist in various forms, such as numbers, text, images, audio, video, or signals. Data is often collected or generated through observation, measurement, or experimentation. Data, in itself, has no inherent meaning or context.</p></li>
+<li><p><strong>Characteristics:</strong></p>
+<ul>
+<li>Raw and unorganized</li>
+<li>Lacks context and meaning</li>
+<li>Can be quantitative or qualitative</li>
+<li>Collected through observation, measurement, or experimentation</li>
+<li>Stored in various formats (e.g., tables, files, databases)</li>
+</ul></li>
+<li><p><strong>Examples:</strong></p>
+<ul>
+<li>A list of temperature readings in Celsius for a city, such as: 25, 27, 29, 26, 24</li>
+<li>A collection of customer names and addresses stored in a database.</li>
+<li>A series of audio samples recorded by a microphone.</li>
+<li>A set of images captured by a camera.</li>
+</ul></li>
+</ul>
+<p><strong>Information:</strong></p>
+<ul>
+<li><p><strong>Definition:</strong> Information is data that has been processed, organized, structured, and given context to make it meaningful and useful for decision-making. Information answers questions like “who,” “what,” “where,” “when,” and “how many.”</p></li>
+<li><p><strong>Characteristics:</strong></p>
+<ul>
+<li>Processed, organized, and structured</li>
+<li>Provides context and meaning</li>
+<li>Answers questions about the data</li>
+<li>Useful for decision-making, analysis, and communication</li>
+<li>Can be derived from data through analysis, interpretation, and summarization</li>
+</ul></li>
+<li><p><strong>Examples:</strong></p>
+<ul>
+<li>The average temperature for the city based on the raw temperature readings.</li>
+<li>A report showing the total sales by product category for a specific month.</li>
+<li>A graph visualizing the trend of website traffic over time.</li>
+<li>A summary of customer demographics based on data from a database.</li>
+</ul></li>
+</ul>
+<p><strong>Key Differences between Data and Information:</strong></p>
+<p>The easiest way to think of the difference is to consider that data needs to be worked upon to become information.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 34%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Data</th>
+<th>Information</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>State</td>
+<td>Raw, unorganized</td>
+<td>Processed, organized, structured</td>
+</tr>
+<tr class="even">
+<td>Context</td>
+<td>Lacks context and meaning</td>
+<td>Provides context and meaning</td>
+</tr>
+<tr class="odd">
+<td>Purpose</td>
+<td>Storage, collection</td>
+<td>Analysis, decision-making, communication</td>
+</tr>
+<tr class="even">
+<td>Format</td>
+<td>Various (numbers, text, images)</td>
+<td>Meaningful and understandable</td>
+</tr>
+<tr class="odd">
+<td>Example</td>
+<td>Temperature readings: 25, 27, 29</td>
+<td>Average temperature: 26.2 °C</td>
+</tr>
+<tr class="even">
+<td>Dependency</td>
+<td>It is fundamental and basic.</td>
+<td>It is reliant on the processing and interpretation of data.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analogy:</strong></p>
+<p>Think of data as the ingredients for a recipe. On their own, flour, eggs, and sugar are just raw materials. Information is the final baked cake that you understand, eat, and enjoy.</p>
+<p><strong>Conclusion</strong></p>
+<p>Data is the foundation upon which information is built. Data needs to be processed and transformed to become information, which is meaningful and useful for decision-making.</p>
+</section>
 <section id="overview-of-modern-data-analytic-tools" class="level2">
 <h2 class="anchored" data-anchor-id="overview-of-modern-data-analytic-tools">Overview of Modern Data Analytic Tools</h2>
 <p>Data analytics has become an integral part of decision-making across various industries. The field has evolved rapidly, resulting in a wide array of tools and technologies available to data professionals. Selecting the right tools for a project depends on factors like the size and complexity of the data, the analytical goals, the budget, and the team’s skillset. This section provides an overview of some essential modern data analytic tools.</p>
