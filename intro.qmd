@@ -1,0 +1,162 @@
+# Introduction to R and RStudio
+
+
+## Welcome!
+
+This lesson will get you up and running with R and RStudio, the tools we'll be using throughout this module. You'll learn how to install the software, explore the RStudio interface, and run your first R commands. We'll also cover the crucial role of version control for all of your projects.
+
+## Learning Objectives
+
+*   Install R and RStudio.
+*   Understand the different panels in RStudio.
+*   Run basic R commands.
+*   Install and load R packages.
+*   Download sample data.
+*   Inspect a csv file using RStudio.
+*   Understand the basics of Version Control
+*   Understand the basics of a working branch in version control
+
+## Installing R
+
+1.  **Go to the CRAN website:** [https://cran.r-project.org/](https://cran.r-project.org/)
+2.  **Choose your operating system:** (Windows, macOS, or Linux)
+3.  **Download the installer:** Select the appropriate download link for your system.
+4.  **Run the installer:** Follow the on-screen instructions to install R.
+
+## Installing RStudio
+
+RStudio is an integrated development environment (IDE) that makes working with R much easier and more productive.
+
+1.  **Go to the RStudio website:** [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+2.  **Download RStudio Desktop:** Select the free RStudio Desktop version.
+3.  **Choose your operating system:** Select the appropriate installer for your system.
+4.  **Run the installer:** Follow the on-screen instructions to install RStudio.
+
+## Exploring RStudio
+
+Open RStudio. You'll see four main panels:
+
+1.  **Source Editor (Top-Left):** This is where you write and save your R scripts.
+2.  **Console (Bottom-Left):** This is where you execute individual R commands and see the output.
+3.  **Environment/History (Top-Right):**
+    *   **Environment:** Shows a list of loaded data, variables, and functions.
+    *   **History:** Shows a history of commands you've entered.
+4.  **Files/Plots/Packages/Help (Bottom-Right):**
+    *   **Files:** Allows you to browse your computer's file system.
+    *   **Plots:** Displays any plots or graphs you create.
+    *   **Packages:** Allows you to install, update, and load R packages.
+    *   **Help:** Provides documentation for R functions and packages.
+
+## Running Basic R Commands
+
+1.  **In the Console panel:** Type the following commands and press Enter after each one:
+
+    ```r
+    1 + 1
+    x <- 10
+    print(x)
+    ```
+
+    You should see the output of the commands printed in the console.
+
+2.  **Create a new R Script:**
+    *   Click File -> New File -> R Script.
+    *   Type the same commands from above into the script.
+    *   Save the script as `lesson1.R`.
+
+3.  **Run the script:**
+    *   Click the "Source" button in the script editor (or press Ctrl+Shift+Enter).
+    *   The commands in the script will be executed in the console.
+
+## Installing and Loading Packages
+
+R packages are collections of functions, data, and documentation that extend the capabilities of R. The `tidyverse` package is a collection of popular packages for data science.
+
+1.  **Install the `tidyverse` package:** In the Console, type the following command and press Enter:
+
+    ```r
+    install.packages("tidyverse")
+    ```
+
+    R will download and install the `tidyverse` package and its dependencies.  This may take a few minutes.
+
+2.  **Load the `tidyverse` package:** In the Console or in your script, type the following command and press Enter:
+
+    ```r
+    library(tidyverse)
+    ```
+
+    This loads the `tidyverse` package into your R session, making its functions available for use.
+
+## Downloading Sample Data
+
+We'll use a sample CSV file for demonstration.
+
+*   **Download the `exam_scores.csv` file** from the course materials to your data directory. You can also copy this link for downloading directly into R.: [Sample CSV Data](https://raw.githubusercontent.com/datasciencetooling/sample-datasets/main/exam_scores.csv)
+
+## Inspecting Data
+
+Now, let's read the `exam_scores.csv` file into R and inspect it:
+
+```{.r}
+#Replace this link with your actual link to your data.
+
+exam_scores <- read_csv("https://raw.githubusercontent.com/datasciencetooling/sample-datasets/main/exam_scores.csv")
+
+#Display the first few rows.
+head(exam_scores)
+```
+
+## Data Input and Data Types
+
+### Data Types in R
+
+R supports several fundamental data types:
+
+1.  **Numeric:** Numbers (e.g., `1`, `3.14`, `-2.5`).
+2.  **Character:** Text strings (e.g., `"hello"`, `"Data Analysis"`).
+3.  **Factor:** Categorical variables (e.g., `"Low"`, `"Medium"`, `"High"`). Factors are important for statistical analysis.
+4.  **Logical:** Boolean values, `TRUE` or `FALSE`.
+5.  **Date:** Dates and times (e.g., `"2023-10-27"`).
+
+### Checking Data Types
+
+The `class()` function tells you the data type of a variable:
+
+```{r}
+x <- 10
+class(x)
+y <- "hello"
+class(y)
+```
+
+### Converting Data Types
+You can convert between data types using the `as.*()` functions:
+
+```
+as.numeric()
+
+as.character()
+
+as.factor()
+
+as.logical()
+
+as.Date()
+
+```
+
+>*Example:*
+
+```{r}
+x <- "123"
+class(x)
+x_numeric <- as.numeric(x)
+class(x_numeric)
+```
+
+:::{callout-note}
+### Important Note: 
+
+Converting a character string that doesn't represent a number to numeric will result in NA.
+:::

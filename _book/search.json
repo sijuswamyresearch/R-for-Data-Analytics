@@ -1,0 +1,132 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R for Data Analytics",
+    "section": "",
+    "text": "Preface\nData analysis is a skill for everyone. In this module, we’ll break down the barriers and make R programming accessible and empowering. You don’t need to be a math whiz or a programming expert. We’ll start with the fundamentals and guide you step-by-step as you learn to use R for data exploration, visualization, and analysis. More than just coding, you’ll discover how to think critically about data, ask smart questions, and communicate your insights effectively. This module is your launchpad for a data-driven future!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction to R and RStudio",
+    "section": "",
+    "text": "1.1 Welcome!\nThis lesson will get you up and running with R and RStudio, the tools we’ll be using throughout this module. You’ll learn how to install the software, explore the RStudio interface, and run your first R commands. We’ll also cover the crucial role of version control for all of your projects.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "intro.html#learning-objectives",
+    "href": "intro.html#learning-objectives",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.2 Learning Objectives",
+    "text": "1.2 Learning Objectives\n\nInstall R and RStudio.\nUnderstand the different panels in RStudio.\nRun basic R commands.\nInstall and load R packages.\nDownload sample data.\nInspect a csv file using RStudio.\nUnderstand the basics of Version Control\nUnderstand the basics of a working branch in version control",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#installing-r",
+    "href": "intro.html#installing-r",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.3 Installing R",
+    "text": "1.3 Installing R\n\nGo to the CRAN website: https://cran.r-project.org/\nChoose your operating system: (Windows, macOS, or Linux)\nDownload the installer: Select the appropriate download link for your system.\nRun the installer: Follow the on-screen instructions to install R.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#installing-rstudio",
+    "href": "intro.html#installing-rstudio",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.4 Installing RStudio",
+    "text": "1.4 Installing RStudio\nRStudio is an integrated development environment (IDE) that makes working with R much easier and more productive.\n\nGo to the RStudio website: https://www.rstudio.com/products/rstudio/download/\nDownload RStudio Desktop: Select the free RStudio Desktop version.\nChoose your operating system: Select the appropriate installer for your system.\nRun the installer: Follow the on-screen instructions to install RStudio.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#exploring-rstudio",
+    "href": "intro.html#exploring-rstudio",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.5 Exploring RStudio",
+    "text": "1.5 Exploring RStudio\nOpen RStudio. You’ll see four main panels:\n\nSource Editor (Top-Left): This is where you write and save your R scripts.\nConsole (Bottom-Left): This is where you execute individual R commands and see the output.\nEnvironment/History (Top-Right):\n\nEnvironment: Shows a list of loaded data, variables, and functions.\nHistory: Shows a history of commands you’ve entered.\n\nFiles/Plots/Packages/Help (Bottom-Right):\n\nFiles: Allows you to browse your computer’s file system.\nPlots: Displays any plots or graphs you create.\nPackages: Allows you to install, update, and load R packages.\nHelp: Provides documentation for R functions and packages.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#running-basic-r-commands",
+    "href": "intro.html#running-basic-r-commands",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.6 Running Basic R Commands",
+    "text": "1.6 Running Basic R Commands\n\nIn the Console panel: Type the following commands and press Enter after each one:\n1 + 1\nx &lt;- 10\nprint(x)\nYou should see the output of the commands printed in the console.\nCreate a new R Script:\n\nClick File -&gt; New File -&gt; R Script.\nType the same commands from above into the script.\nSave the script as lesson1.R.\n\nRun the script:\n\nClick the “Source” button in the script editor (or press Ctrl+Shift+Enter).\nThe commands in the script will be executed in the console.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#installing-and-loading-packages",
+    "href": "intro.html#installing-and-loading-packages",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.7 Installing and Loading Packages",
+    "text": "1.7 Installing and Loading Packages\nR packages are collections of functions, data, and documentation that extend the capabilities of R. The tidyverse package is a collection of popular packages for data science.\n\nInstall the tidyverse package: In the Console, type the following command and press Enter:\ninstall.packages(\"tidyverse\")\nR will download and install the tidyverse package and its dependencies. This may take a few minutes.\nLoad the tidyverse package: In the Console or in your script, type the following command and press Enter:\nlibrary(tidyverse)\nThis loads the tidyverse package into your R session, making its functions available for use.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#downloading-sample-data",
+    "href": "intro.html#downloading-sample-data",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.8 Downloading Sample Data",
+    "text": "1.8 Downloading Sample Data\nWe’ll use a sample CSV file for demonstration.\n\nDownload the exam_scores.csv file from the course materials to your data directory. You can also copy this link for downloading directly into R.: Sample CSV Data",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#inspecting-data",
+    "href": "intro.html#inspecting-data",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.9 Inspecting Data",
+    "text": "1.9 Inspecting Data\nNow, let’s read the exam_scores.csv file into R and inspect it:\n#Replace this link with your actual link to your data.\n\nexam_scores &lt;- read_csv(\"https://raw.githubusercontent.com/datasciencetooling/sample-datasets/main/exam_scores.csv\")\n\n#Display the first few rows.\nhead(exam_scores)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#data-input-and-data-types",
+    "href": "intro.html#data-input-and-data-types",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.10 Data Input and Data Types",
+    "text": "1.10 Data Input and Data Types\n\n1.10.1 Data Types in R\nR supports several fundamental data types:\n\nNumeric: Numbers (e.g., 1, 3.14, -2.5).\nCharacter: Text strings (e.g., \"hello\", \"Data Analysis\").\nFactor: Categorical variables (e.g., \"Low\", \"Medium\", \"High\"). Factors are important for statistical analysis.\nLogical: Boolean values, TRUE or FALSE.\nDate: Dates and times (e.g., \"2023-10-27\").\n\n\n\n1.10.2 Checking Data Types\nThe class() function tells you the data type of a variable:\n\nx &lt;- 10\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- \"hello\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n1.10.3 Converting Data Types\nYou can convert between data types using the as.*() functions:\nas.numeric()\n\nas.character()\n\nas.factor()\n\nas.logical()\n\nas.Date()\n\n\nExample:\n\n\nx &lt;- \"123\"\nclass(x)\n\n[1] \"character\"\n\nx_numeric &lt;- as.numeric(x)\nclass(x_numeric)\n\n[1] \"numeric\"\n\n\n\n\n1.10.4 Important Note:\nConverting a character string that doesn’t represent a number to numeric will result in NA.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  }
+]

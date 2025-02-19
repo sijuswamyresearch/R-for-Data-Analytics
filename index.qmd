@@ -1,0 +1,3 @@
+# Preface {.unnumbered}
+
+Data analysis is a skill for everyone. In this module, we'll break down the barriers and make R programming accessible and empowering. You don't need to be a math whiz or a programming expert. We'll start with the fundamentals and guide you step-by-step as you learn to use R for data exploration, visualization, and analysis. More than just coding, you'll discover how to think critically about data, ask smart questions, and communicate your insights effectively. This module is your launchpad for a data-driven future!
