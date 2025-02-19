@@ -1,5 +1,5 @@
 student_id,study_hours,score,grade
-1,2,65,C
+1,,65,C
 2,5,88,B
 3,1,52,F
 4,3,76,c
