@@ -2,6 +2,12 @@
 
 >*Reference:* @kabacoff2022r, @mayor2015learning.
 
+:::{.callout-note}
+## Good Text book
+
+[R for Data Science]<https://r4ds.hadley.nz/>
+
+:::
 
 ## Running Basic R Commands
 

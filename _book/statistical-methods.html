@@ -278,12 +278,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(population_norm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     value          
- Min.   :-5.034188  
- 1st Qu.:-0.675639  
- Median : 0.001815  
- Mean   : 0.000742  
- 3rd Qu.: 0.675531  
- Max.   : 5.058659  </code></pre>
+ Min.   :-4.741244  
+ 1st Qu.:-0.675133  
+ Median :-0.000582  
+ Mean   :-0.000347  
+ 3rd Qu.: 0.674785  
+ Max.   : 5.110437  </code></pre>
 </div>
 </div>
 <div class="cell">
@@ -312,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     Shapiro-Wilk normality test
 
 data:  population_norm$value[1:5000]
-W = 0.99934, p-value = 0.06244</code></pre>
+W = 0.99967, p-value = 0.6156</code></pre>
 </div>
 </div>
 <p>If the p-value is less than the significance level (alpha) you reject the null hypothesis and it means there is a statistical significance. In this case, reject null. The shapiro test is testing if the data “normal”. But in this case if the test passes it has to be rejected, since it will be testing if data is “non-normal”, thus the need to invert the value.</p>
@@ -390,8 +390,8 @@ W = 0.99934, p-value = 0.06244</code></pre>
 <pre><code># A tibble: 2 × 2
   group mean_value
   &lt;chr&gt;      &lt;dbl&gt;
-1 A         0.0399
-2 B         0.598 </code></pre>
+1 A        -0.0159
+2 B         0.583 </code></pre>
 </div>
 </div>
 <p>Perform t Test. Note, that for this particular function, you will need at least 2 variable.</p>
@@ -402,13 +402,13 @@ W = 0.99934, p-value = 0.06244</code></pre>
     Welch Two Sample t-test
 
 data:  value by group
-t = -2.6314, df = 97.665, p-value = 0.009882
+t = -3.0912, df = 91.211, p-value = 0.002644
 alternative hypothesis: true difference in means between group A and group B is not equal to 0
 95 percent confidence interval:
- -0.9794868 -0.1372658
+ -0.9837332 -0.2140628
 sample estimates:
 mean in group A mean in group B 
-     0.03988553      0.59826182 </code></pre>
+    -0.01585964      0.58303835 </code></pre>
 </div>
 </div>
 <p>From here the t-test is the main value to look for, which validates whether the averages are different. The important detail here is the p-value. As mentioned earlier, if the P-Value is less than the alpha, which is typically 0.05, it means that we should reject that distribution.</p>
