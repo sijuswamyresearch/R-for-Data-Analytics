@@ -4,7 +4,7 @@ project:
 book:
   title: "R for Data Analytics"
   author: "Siju Swamy"
-  date: "2/19/2025"
+  date: "6/23/2025"
   chapters:
     - index.qmd
     - intro.qmd
