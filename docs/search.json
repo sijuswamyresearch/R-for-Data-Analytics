@@ -1,0 +1,632 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R for Data Analytics",
+    "section": "",
+    "text": "Preface\nData analysis is a skill for everyone. In this module, we’ll break down the barriers and make R programming accessible and empowering. You don’t need to be a math whiz or a programming expert. We’ll start with the fundamentals and guide you step-by-step as you learn to use R for data exploration, visualization, and analysis. More than just coding, you’ll discover how to think critically about data, ask smart questions, and communicate your insights effectively. This module is your launchpad for a data-driven future!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#data-vs.-information",
+    "href": "index.html#data-vs.-information",
+    "title": "R for Data Analytics",
+    "section": "Data vs. Information",
+    "text": "Data vs. Information\nData:\n\nDefinition: Data consists of raw, unorganized facts, figures, symbols, and details about people, objects, events, or situations. It can exist in various forms, such as numbers, text, images, audio, video, or signals. Data is often collected or generated through observation, measurement, or experimentation. Data, in itself, has no inherent meaning or context.\nCharacteristics:\n\nRaw and unorganized\nLacks context and meaning\nCan be quantitative or qualitative\nCollected through observation, measurement, or experimentation\nStored in various formats (e.g., tables, files, databases)\n\nExamples:\n\nA list of temperature readings in Celsius for a city, such as: 25, 27, 29, 26, 24\nA collection of customer names and addresses stored in a database.\nA series of audio samples recorded by a microphone.\nA set of images captured by a camera.\n\n\nInformation:\n\nDefinition: Information is data that has been processed, organized, structured, and given context to make it meaningful and useful for decision-making. Information answers questions like “who,” “what,” “where,” “when,” and “how many.”\nCharacteristics:\n\nProcessed, organized, and structured\nProvides context and meaning\nAnswers questions about the data\nUseful for decision-making, analysis, and communication\nCan be derived from data through analysis, interpretation, and summarization\n\nExamples:\n\nThe average temperature for the city based on the raw temperature readings.\nA report showing the total sales by product category for a specific month.\nA graph visualizing the trend of website traffic over time.\nA summary of customer demographics based on data from a database.\n\n\nKey Differences between Data and Information:\nThe easiest way to think of the difference is to consider that data needs to be worked upon to become information.\n\n\n\n\n\n\n\n\nFeature\nData\nInformation\n\n\n\n\nState\nRaw, unorganized\nProcessed, organized, structured\n\n\nContext\nLacks context and meaning\nProvides context and meaning\n\n\nPurpose\nStorage, collection\nAnalysis, decision-making, communication\n\n\nFormat\nVarious (numbers, text, images)\nMeaningful and understandable\n\n\nExample\nTemperature readings: 25, 27, 29\nAverage temperature: 26.2 °C\n\n\nDependency\nIt is fundamental and basic.\nIt is reliant on the processing and interpretation of data.\n\n\n\nAnalogy:\nThink of data as the ingredients for a recipe. On their own, flour, eggs, and sugar are just raw materials. Information is the final baked cake that you understand, eat, and enjoy.\nConclusion\nData is the foundation upon which information is built. Data needs to be processed and transformed to become information, which is meaningful and useful for decision-making.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#overview-of-modern-data-analytic-tools",
+    "href": "index.html#overview-of-modern-data-analytic-tools",
+    "title": "R for Data Analytics",
+    "section": "Overview of Modern Data Analytic Tools",
+    "text": "Overview of Modern Data Analytic Tools\nData analytics has become an integral part of decision-making across various industries. The field has evolved rapidly, resulting in a wide array of tools and technologies available to data professionals. Selecting the right tools for a project depends on factors like the size and complexity of the data, the analytical goals, the budget, and the team’s skillset. This section provides an overview of some essential modern data analytic tools.\n\n1. Programming Languages\nProgramming languages form the foundation for most data analytic tasks. They provide the flexibility to perform custom analyses, build complex models, and automate data processing.\n\nR\n\nDescription: R is a language and environment specifically designed for statistical computing and graphics. It excels in statistical analysis, data visualization, and building custom analytical solutions.\nKey Features:\n\nExtensive collection of packages for statistical modeling, machine learning, and data manipulation.\nExcellent visualization capabilities through packages like ggplot2, enabling the creation of high-quality static plots.\nA vibrant and active community, providing ample resources, tutorials, and support.\nStrong focus on statistical rigor and reproducible research.\n\nUse Cases: Statistical analysis, data visualization, building custom analytical models, reproducible research.\nR Tidyverse: A collection of R packages which helps create a tidy data set. The tidyverse package helps with:\n\nEasier to read and interpret\nEasier to maintain since all packages integrate better with each other.\n\n\n\n\nPython\n\nDescription: Python is a versatile, general-purpose programming language widely used for data science, machine learning, web development, and more. Its simplicity and extensive libraries make it a popular choice for data analysis.\nKey Features:\n\nRich ecosystem of libraries for data analysis (Pandas, NumPy), machine learning (Scikit-learn, TensorFlow, PyTorch), and visualization (Matplotlib, Seaborn).\nEasy-to-learn syntax and a large, supportive community.\nStrong integration with other systems and technologies, making it suitable for building end-to-end data pipelines.\nWide adoption in machine learning and artificial intelligence research.\n\nUse Cases: Data analysis, machine learning, building data pipelines, web development, automation.\n\n\n\nSQL\n\nDescription: SQL (Structured Query Language) is the standard language for managing and querying relational databases.\nKey Features:\n\nUsed to extract, manipulate, and analyze data stored in relational databases.\nEssential for retrieving data for analysis and generating reports.\nUsed for database administration tasks.\n\n\n\n\n\n2. Data Storage Solutions\nData storage solutions play a critical role in housing the data that fuels data analytics. These solutions range from traditional relational databases to modern NoSQL databases and cloud-based storage services.\n\nRelational Databases (SQL Databases)\n\nDescription: Relational databases, such as MySQL, PostgreSQL, Oracle, and SQL Server, organize data into structured tables with rows and columns. They use SQL to query and manage the data.\nKey Features:\n\nStructured storage based on tables with well-defined relationships.\nACID compliance (Atomicity, Consistency, Isolation, Durability) ensures data integrity.\nSQL language for querying, manipulating, and managing data.\nSuitable for applications requiring structured data with clear schemas.\n\nUse Cases: Transaction processing, data warehousing, applications with structured data requirements.\n\n\n\nNoSQL Databases\n\nDescription: NoSQL databases are non-relational databases that offer flexibility and scalability for handling unstructured, semi-structured, and large-volume data.\nKey Features:\n\nSupport various data models, including document, key-value, graph, and column-family stores.\nDesigned to handle unstructured or semi-structured data, large volumes of data, and high-velocity data streams.\nScalability and high availability for demanding applications.\n\nUse Cases: Web applications, social media analytics, IoT data storage, applications with flexible data schemas.\n\n\n\nCloud Storage\n\nDescription: Cloud storage solutions, such as Amazon S3, Azure Blob Storage, and Google Cloud Storage, provide scalable and cost-effective storage for large datasets.\nKey Features:\n\nScalable storage for large datasets in the cloud.\nCost-effective, pay-as-you-go pricing model.\nEasy access and integration with other cloud services.\nSuitable for storing data for big data analytics and machine learning.\n\nUse Cases: Data lakes, data warehousing, backup and archiving, serving content to web applications.\n\n\n\n\n3. Data Processing Frameworks\nData processing frameworks are designed to handle the complexities of large-scale data processing, enabling data analysts to extract valuable insights from massive datasets.\n\nApache Hadoop\n\nDescription: Apache Hadoop is an open-source framework for distributed storage and processing of large datasets.\nKey Features:\n\nDistributed storage using the Hadoop Distributed File System (HDFS).\nDistributed processing using the MapReduce programming model.\nScalability and fault tolerance for processing large datasets.\nSuitable for batch processing of historical data.\n\nUse Cases: Batch processing of large datasets, data warehousing, log analysis.\n\n\n\nApache Spark\n\nDescription: Apache Spark is a fast and general-purpose distributed processing engine.\nKey Features:\n\nIn-memory processing for faster analytics.\nSupport for various programming languages (Python, R, Scala, Java).\nIntegration with Hadoop and other data sources.\nLibraries for machine learning (MLlib) and graph processing (GraphX).\n\nUse Cases: Real-time data processing, machine learning, graph analysis, ETL (Extract, Transform, Load) operations.\n\n\n\nCloud-Based Data Warehouses\n\nDescription: Cloud-based data warehouses, such as Amazon Redshift, Google BigQuery, and Azure Synapse Analytics, provide scalable storage, data warehousing capabilities, and integration with other cloud services.\nKey Features:\n\nScalable storage and compute resources for data warehousing.\nSQL-based querying and analysis.\nIntegration with cloud-based data sources and analytics services.\nPay-as-you-go pricing models for cost-effectiveness.\n\nUse Cases: Data warehousing, business intelligence, reporting, large-scale data analytics.\n\n\n\n\n4. Data Visualization Tools\nData visualization tools enable data professionals to create visually appealing and informative representations of data, facilitating insights and effective communication.\n\nggplot2 (R)\n\nDescription: ggplot2 is a powerful and flexible visualization package for R, based on the Grammar of Graphics.\nKey Features:\n\nA consistent and coherent system for creating a wide range of static plots.\nFlexibility to customize every aspect of the plot, from colors and fonts to scales and labels.\nIntegration with other R packages, enabling the creation of dynamic and interactive visualizations.\n\nUse Cases: Creating static plots for reports, publications, and presentations.\n\n\n\nMatplotlib and Seaborn (Python)\n\nDescription: Matplotlib and Seaborn are popular visualization libraries in Python. Matplotlib provides basic plotting capabilities, while Seaborn builds on Matplotlib to offer more advanced and visually appealing plots.\nKey Features:\n\nMatplotlib provides a wide range of plotting functions for creating static and interactive plots.\nSeaborn offers pre-built styles and plot types for creating visually appealing visualizations.\nIntegration with Pandas and NumPy for easy data handling.\n\nUse Cases: Creating static and interactive plots for data exploration, presentation, and reporting.\n\n\n\nTableau\n\nDescription: Tableau is a commercial data visualization and business intelligence tool known for its user-friendly interface, interactive dashboards, and ability to connect to various data sources.\nKey Features:\n\nDrag-and-drop interface for creating visualizations.\nInteractive dashboards for exploring data and uncovering insights.\nAbility to connect to a wide range of data sources, including databases, spreadsheets, and cloud services.\n\nUse Cases: Business intelligence, data exploration, creating interactive dashboards, sharing insights.\n\n\n\nPower BI\n\nDescription: Microsoft Power BI is a business intelligence and data visualization tool offering similar capabilities to Tableau and integrating well with other Microsoft products.\nKey Features:\n\nUser-friendly interface for creating visualizations and dashboards.\nIntegration with Microsoft Excel, SQL Server, and other Microsoft services.\nAbility to connect to various data sources, including cloud services and on-premises databases.\n\nUse Cases: Business intelligence, data exploration, creating interactive dashboards, sharing insights.\n\n\n\n\n5. Specialized Platforms\nIn addition to the core tools and technologies, specialized platforms offer specific functionalities and capabilities for advanced data analytics.\n\nMachine Learning Platforms\n\nDescription: Cloud-based platforms like Amazon SageMaker, Google AI Platform, and Azure Machine Learning Studio provide tools for building, training, and deploying machine learning models.\nKey Features:\n\nManaged environments for machine learning development.\nSupport for various machine learning frameworks and algorithms.\nScalable compute resources for training models.\nTools for model deployment and monitoring.\n\nUse Cases: Building and deploying machine learning models for predictive analytics, recommendation systems, image recognition, and natural language processing.\n\n\n\nData Science Notebooks\n\nDescription: Interactive environments like Jupyter Notebook and R Markdown that allow you to combine code, text, and visualizations in a single document.\nKey Features:\n\nInteractive coding and execution of code snippets.\nSupport for multiple programming languages (Python, R, Julia).\nAbility to embed visualizations, equations, and narrative text.\nIdeal for exploratory data analysis, reproducible research, and creating interactive reports.\n\nUse Cases: Exploratory data analysis, data cleaning and transformation, building analytical models, creating interactive reports.\n\n\n\nCloud-Based Analytics Services\n\nDescription: Services like AWS Analytics, Google Cloud Analytics, and Azure Analytics provide a suite of tools for data ingestion, processing, analysis, and visualization in the cloud.\nKey Features:\n\nManaged services for data ingestion, storage, processing, and analysis.\nIntegration with other cloud services.\nScalable compute and storage resources.\nPay-as-you-go pricing models.\n\nUse Cases: End-to-end data analytics pipelines, data warehousing, business intelligence, machine learning.\n\n\n\n\nIntegration with R\nMany of the tools listed can be integrated with R, enhancing the analytical capabilities of the R environment:\n\nRJDBC and RODBC: Packages for connecting R to relational databases.\nsparklyr: An R interface to Apache Spark, enabling distributed data processing from R.\nR API Clients: Packages for accessing data from cloud services, such as AWS, Google Cloud, and Azure.\n\n\n\nConsiderations for Choosing Tools\n\nData Volume and Velocity: Consider distributed processing frameworks like Spark for very large datasets.\nData Structure: Choose relational databases for structured data and NoSQL databases for unstructured or semi-structured data.\nAnalytic Goals: Select tools with libraries and functions tailored to your specific analytical needs.\nSkill Set: Consider your existing skills and the learning curve associated with each tool.\nCost: Evaluate the costs of licenses, cloud services, and infrastructure.\n\nThis overview provides a comprehensive guide to modern data analytic tools, enabling data professionals to make informed decisions about selecting the right tools for their projects. Remember to consider the specific requirements of your analytical goals and the characteristics of your data.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction to R and RStudio",
+    "section": "",
+    "text": "1.1 Welcome!\nThis session will get you up and running with R and RStudio, the tools we’ll be using throughout this module. You’ll learn how to install the software, explore the RStudio interface, and run your first R commands. We’ll also cover the crucial role of version control for all of your projects.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#learning-objectives",
+    "href": "intro.html#learning-objectives",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.2 Learning Objectives",
+    "text": "1.2 Learning Objectives\n\nInstall R and RStudio.\nUnderstand the different panels in RStudio.\nRun basic R commands.\nInstall and load R packages.\nDownload sample data.\nInspect a csv file using RStudio.\nUnderstand the basics of Version Control\nUnderstand the basics of a working branch in version control",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#installing-r",
+    "href": "intro.html#installing-r",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.3 Installing R",
+    "text": "1.3 Installing R\n\nGo to the CRAN website: https://cran.r-project.org/\nChoose your operating system: (Windows, macOS, or Linux)\nDownload the installer: Select the appropriate download link for your system.\nRun the installer: Follow the on-screen instructions to install R.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#installing-rstudio",
+    "href": "intro.html#installing-rstudio",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.4 Installing RStudio",
+    "text": "1.4 Installing RStudio\nRStudio is an integrated development environment (IDE) that makes working with R much easier and more productive.\n\nGo to the RStudio website: https://www.rstudio.com/products/rstudio/download/\nDownload RStudio Desktop: Select the free RStudio Desktop version.\nChoose your operating system: Select the appropriate installer for your system.\nRun the installer: Follow the on-screen instructions to install RStudio.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#exploring-rstudio",
+    "href": "intro.html#exploring-rstudio",
+    "title": "1  Introduction to R and RStudio",
+    "section": "1.5 Exploring RStudio",
+    "text": "1.5 Exploring RStudio\nOpen RStudio. You’ll see four main panels:\n\nSource Editor (Top-Left): This is where you write and save your R scripts.\nConsole (Bottom-Left): This is where you execute individual R commands and see the output.\nEnvironment/History (Top-Right):\n\nEnvironment: Shows a list of loaded data, variables, and functions.\nHistory: Shows a history of commands you’ve entered.\n\nFiles/Plots/Packages/Help (Bottom-Right):\n\nFiles: Allows you to browse your computer’s file system.\nPlots: Displays any plots or graphs you create.\nPackages: Allows you to install, update, and load R packages.\nHelp: Provides documentation for R functions and packages.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R and RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html",
+    "href": "basics.html",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "",
+    "text": "2.1 Running Basic R Commands",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#running-basic-r-commands",
+    "href": "basics.html#running-basic-r-commands",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "",
+    "text": "In the Console panel: Type the following commands and press Enter after each one:\n\n1 + 1\n\n[1] 2\n\nx &lt;- 10\nprint(x)\n\n[1] 10\n\n\nYou should see the output of the commands printed in the console.\nCreate a new R Script:\n\nClick File -&gt; New File -&gt; R Script.\nType the same commands from above into the script.\nSave the script as lesson1.R.\n\nRun the script:\n\nClick the “Source” button in the script editor (or press Ctrl+Shift+Enter).\nThe commands in the script will be executed in the console.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#installing-and-loading-packages",
+    "href": "basics.html#installing-and-loading-packages",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.2 Installing and Loading Packages",
+    "text": "2.2 Installing and Loading Packages\nR packages are collections of functions, data, and documentation that extend the capabilities of R. The tidyverse package is a collection of popular packages for data science.\n\nInstall the tidyverse package: In the Console, type the following command and press Enter:\ninstall.packages(\"tidyverse\")\nR will download and install the tidyverse package and its dependencies. This may take a few minutes.\nLoad the tidyverse package: In the Console or in your script, type the following command and press Enter:\nlibrary(tidyverse)\nThis loads the tidyverse package into your R session, making its functions available for use.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#downloading-sample-data",
+    "href": "basics.html#downloading-sample-data",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.3 Downloading Sample Data",
+    "text": "2.3 Downloading Sample Data\nWe’ll use a sample CSV file for demonstration.\n\nDownload the exam_scores.csv file from the course materials to your data directory. You can also copy this link for downloading directly into R.: Sample CSV Data",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#inspecting-data",
+    "href": "basics.html#inspecting-data",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.4 Inspecting Data",
+    "text": "2.4 Inspecting Data\nNow, let’s read the exam_scores.csv file into R and inspect it:\n\n#Replace this link with your actual link to your data.\n\nexam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\n\n#Display the first few rows.\nhead(exam_scores)\n\n  student_id study_hours score grade\n1          1          NA    65     C\n2          2           5    88     B\n3          3           1    52     F\n4          4           3    76     c\n5          5           4    82     B\n6          6           2   100     C",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#data-input-and-data-types",
+    "href": "basics.html#data-input-and-data-types",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.5 Data Input and Data Types",
+    "text": "2.5 Data Input and Data Types\n\n2.5.1 Data Types in R\nR supports several fundamental data types:\n\nNumeric: Numbers (e.g., 1, 3.14, -2.5).\nCharacter: Text strings (e.g., \"hello\", \"Data Analysis\").\nFactor: Categorical variables (e.g., \"Low\", \"Medium\", \"High\"). Factors are important for statistical analysis.\nLogical: Boolean values, TRUE or FALSE.\nDate: Dates and times (e.g., \"2023-10-27\").\n\n\n\n2.5.2 Checking Data Types\nThe class() function tells you the data type of a variable:\n\nx &lt;- 10\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- \"hello\"\nclass(y)\n\n[1] \"character\"\n\n\n\n\n2.5.3 Converting Data Types\nYou can convert between data types using the as.*() functions:\nas.numeric()\n\nas.character()\n\nas.factor()\n\nas.logical()\n\nas.Date()\n\n\nExample:\n\n\nx &lt;- \"123\"\nclass(x)\n\n[1] \"character\"\n\nx_numeric &lt;- as.numeric(x)\nclass(x_numeric)\n\n[1] \"numeric\"\n\n\n\n\n\n\n\n\nImportant Note:\n\n\n\nConverting a character string that doesn’t represent a number to numeric will result in NA.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#lists-arrays-and-data-frames-in-r",
+    "href": "basics.html#lists-arrays-and-data-frames-in-r",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.6 Lists, Arrays, and Data Frames in R",
+    "text": "2.6 Lists, Arrays, and Data Frames in R",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#lists",
+    "href": "basics.html#lists",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.7 1. Lists",
+    "text": "2.7 1. Lists\nLists are versatile data structures that can hold elements of different types. A list can contain numbers, strings, vectors, arrays, or even other lists.\n\n2.7.1 Creating Lists\nYou can create a list using the list() function.\n\n2.7.1.1 Example 1: Creating a Simple List\n\n# Creating a simple list\nmy_list &lt;- list(name = \"John\", age = 30, grades = c(85, 90, 78))\nprint(my_list)\n\n$name\n[1] \"John\"\n\n$age\n[1] 30\n\n$grades\n[1] 85 90 78\n\n\n\n\n\n2.7.2 Accessing List Elements\nYou can access list elements using their names or indices.\n\n2.7.2.1 Example 2: Accessing List Elements by Name\n\n# Accessing list elements by name\nname &lt;- my_list$name\nage &lt;- my_list$age\nprint(paste(\"Name:\", name))\n\n[1] \"Name: John\"\n\nprint(paste(\"Age:\", age))\n\n[1] \"Age: 30\"\n\n\n\n\n2.7.2.2 Example 3: Accessing List Elements by Index\n\n# Accessing list elements by index\nname &lt;- my_list[[1]]\nage &lt;- my_list[[2]]\nprint(paste(\"Name:\", name))\n\n[1] \"Name: John\"\n\nprint(paste(\"Age:\", age))\n\n[1] \"Age: 30\"\n\n\n\n\n\n2.7.3 Modifying Lists\nYou can modify lists by adding, updating, or deleting elements.\n\n# Adding elements to a list\nmy_list$city &lt;- \"New York\"\nprint(my_list)\n\n$name\n[1] \"John\"\n\n$age\n[1] 30\n\n$grades\n[1] 85 90 78\n\n$city\n[1] \"New York\"\n\n\n\n# Updating list elements\nmy_list$age &lt;- 31\nprint(my_list)\n\n$name\n[1] \"John\"\n\n$age\n[1] 31\n\n$grades\n[1] 85 90 78\n\n$city\n[1] \"New York\"\n\n\n\n# Deleting list elements\nmy_list$grades &lt;- NULL\nprint(my_list)\n\n$name\n[1] \"John\"\n\n$age\n[1] 31\n\n$city\n[1] \"New York\"",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#arrays",
+    "href": "basics.html#arrays",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.8 2. Arrays",
+    "text": "2.8 2. Arrays\nArrays are data structures that can hold elements of the same type in multiple dimensions.\n\n2.8.1 Creating Arrays\nYou can create an array using the array() function.\n\n#one dimensional array\na1=array(1:10)\nprint(a1)\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\n\n\n# Creating a 2D array (matrix)\nmy_matrix &lt;- array(data = 1:9, dim = c(3, 3))\nprint(my_matrix)\n\n     [,1] [,2] [,3]\n[1,]    1    4    7\n[2,]    2    5    8\n[3,]    3    6    9\n\n\n\n# creating matrix using matrix function\nm1=matrix(c(1,2,3,4,5,6,7,8,9),ncol=3,byrow=T)\nm1\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    4    5    6\n[3,]    7    8    9\n\n\n\n# Creating a 3D array\nmy_3d_array &lt;- array(data = 1:27, dim = c(3, 3, 3))\nprint(my_3d_array)\n\n, , 1\n\n     [,1] [,2] [,3]\n[1,]    1    4    7\n[2,]    2    5    8\n[3,]    3    6    9\n\n, , 2\n\n     [,1] [,2] [,3]\n[1,]   10   13   16\n[2,]   11   14   17\n[3,]   12   15   18\n\n, , 3\n\n     [,1] [,2] [,3]\n[1,]   19   22   25\n[2,]   20   23   26\n[3,]   21   24   27\n\n\n\n# Accessing array elements\nmy_matrix\n\n     [,1] [,2] [,3]\n[1,]    1    4    7\n[2,]    2    5    8\n[3,]    3    6    9\n\nelement &lt;- my_matrix[2, 3]\nprint(paste(\"Element at (2, 3):\", element))\n\n[1] \"Element at (2, 3): 8\"\n\n\n\n# Modifying array elements\nmy_matrix[1, 1] &lt;- 10\nprint(my_matrix)\n\n     [,1] [,2] [,3]\n[1,]   10    4    7\n[2,]    2    5    8\n[3,]    3    6    9\n\n\n\n\n2.8.2 Array Operations\nYou can perform various operations on arrays, such as transposing and performing arithmetic operations.\n\n# Transposing a matrix\ntransposed_matrix &lt;- t(my_matrix)\nprint(transposed_matrix)\n\n     [,1] [,2] [,3]\n[1,]   10    2    3\n[2,]    4    5    6\n[3,]    7    8    9\n\n\n\n# Creating another matrix\nanother_matrix &lt;- array(data = 10:18, dim = c(3, 3))\n\n# Matrix multiplication\nmultiplied_matrix &lt;- my_matrix %*% another_matrix\nprint(multiplied_matrix)\n\n     [,1] [,2] [,3]\n[1,]  228  291  354\n[2,]  171  216  261\n[3,]  204  258  312",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "basics.html#data-frames",
+    "href": "basics.html#data-frames",
+    "title": "2  Basics of R programming for Data Analysis",
+    "section": "2.9 3. Data Frames",
+    "text": "2.9 3. Data Frames\nData frames are table-like data structures that organize data into rows and columns. Each column can hold data of a different type.\nYou can create a data frame using the data.frame() function.\n\n# Creating a data frame\nmy_data_frame &lt;- data.frame(\n  id = 1:3,\n  name = c(\"Alice\", \"Bob\", \"Charlie\"),\n  age = c(25, 30, 28),\n  score = c(85, 92, 78)\n)\nprint(my_data_frame)\n\n  id    name age score\n1  1   Alice  25    85\n2  2     Bob  30    92\n3  3 Charlie  28    78\n\n\n\n2.9.1 Accessing Data Frame Elements\nYou can access data frame elements using their column names or indices.\n\n# Accessing data frame columns by name\nnames &lt;- my_data_frame$name\nages &lt;- my_data_frame$age\nprint(names)\n\n[1] \"Alice\"   \"Bob\"     \"Charlie\"\n\nprint(ages)\n\n[1] 25 30 28\n\n\n\n\n2.9.2 Modifying Data Frames\nYou can modify data frames by adding, updating, or deleting columns and rows.\n\n# Adding a column to a data frame\nmy_data_frame$city &lt;- c(\"New York\", \"Los Angeles\", \"Chicago\")\nprint(my_data_frame)\n\n  id    name age score        city\n1  1   Alice  25    85    New York\n2  2     Bob  30    92 Los Angeles\n3  3 Charlie  28    78     Chicago\n\n\n\n# Updating data frame elements\nmy_data_frame$age[1] &lt;- 26\nprint(my_data_frame)\n\n  id    name age score        city\n1  1   Alice  26    85    New York\n2  2     Bob  30    92 Los Angeles\n3  3 Charlie  28    78     Chicago\n\n\n\n# Deleting a column from a data frame\nmy_data_frame$city &lt;- NULL\nprint(my_data_frame)\n\n  id    name age score\n1  1   Alice  26    85\n2  2     Bob  30    92\n3  3 Charlie  28    78\n\n\n\n# Adding rows to a data frame\nnew_row &lt;- data.frame(id = 4, name = \"David\", age = 32, score = 90)\nmy_data_frame &lt;- rbind(my_data_frame, new_row)\nprint(my_data_frame)\n\n  id    name age score\n1  1   Alice  26    85\n2  2     Bob  30    92\n3  3 Charlie  28    78\n4  4   David  32    90\n\n\n\n#adding a column using cbind\nnew_col=data.frame(city=c(\"Kottayam\",\"Ettumanoor\",\"Elanji\",\"Muvattupuzha\"))\nmy_data_frame=cbind(my_data_frame,new_col)\nmy_data_frame\n\n  id    name age score         city\n1  1   Alice  26    85     Kottayam\n2  2     Bob  30    92   Ettumanoor\n3  3 Charlie  28    78       Elanji\n4  4   David  32    90 Muvattupuzha\n\n\n\n# Deleting rows from a data frame\nmy_data_frame &lt;- my_data_frame[-4, ]\nprint(my_data_frame)\n\n  id    name age score       city\n1  1   Alice  26    85   Kottayam\n2  2     Bob  30    92 Ettumanoor\n3  3 Charlie  28    78     Elanji\n\n\n\n\n2.9.3 Data Frame Operations\nYou can perform various operations on data frames, such as subsetting, filtering, sorting, and merging.\n\n# Subsetting data frames\nsubset_df &lt;- my_data_frame[, c(\"name\", \"score\")]\nprint(subset_df)\n\n     name score\n1   Alice    85\n2     Bob    92\n3 Charlie    78\n\n\n\n# Filtering data frames\nfiltered_df &lt;- my_data_frame[my_data_frame$age &gt; 28, ]\nprint(filtered_df)\n\n  id name age score       city\n2  2  Bob  30    92 Ettumanoor\n\n\n\n# Sorting data frames\nsorted_df &lt;- my_data_frame[order(my_data_frame$age), ]\nprint(sorted_df)\n\n  id    name age score       city\n1  1   Alice  26    85   Kottayam\n3  3 Charlie  28    78     Elanji\n2  2     Bob  30    92 Ettumanoor\n\n\n\n\n\n\nKabacoff, Robert. 2022. R in Action: Data Analysis and Graphics with r and Tidyverse. Simon; Schuster.\n\n\nMayor, Eric. 2015. Learning Predictive Analytics with r. Packt Publishing Ltd.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R programming for Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html",
+    "href": "data-cleaning.html",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "",
+    "text": "3.1 Introduction\nIn this lesson, we’ll tackle the often-messy reality of real-world data: dirty data. We’ll learn how to identify common data quality issues like missing values, outliers, and inconsistencies, and then apply techniques in R to clean and transform the data into a usable format. This lesson will also focus on cloud deployments with version control.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#learning-objectives",
+    "href": "data-cleaning.html#learning-objectives",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.2 Learning Objectives",
+    "text": "3.2 Learning Objectives\n\nIdentify common data quality issues.\nDetect missing values and apply appropriate handling methods (removal, imputation).\nDetect outliers and apply appropriate handling methods (trimming, capping, transformation).\nCorrect inconsistent data entries (e.g., typos, inconsistent formatting).\nCommit and upload the project again to version control.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#what-is-dirty-data",
+    "href": "data-cleaning.html#what-is-dirty-data",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.3 What is Dirty Data?",
+    "text": "3.3 What is Dirty Data?\nDirty data refers to data that is inaccurate, incomplete, inconsistent, or otherwise unreliable. Common sources of dirty data include:\n\nHuman error during data entry\nData integration issues from multiple sources\nSoftware bugs\nInconsistent data standards",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#the-exam_scores-dataset-lets-get-specific",
+    "href": "data-cleaning.html#the-exam_scores-dataset-lets-get-specific",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.4 The exam_scores Dataset: Let’s Get Specific",
+    "text": "3.4 The exam_scores Dataset: Let’s Get Specific\nWe’ll use our exam_scores dataset (or a modified version with intentional errors) to illustrate these cleaning techniques. We’ll assume the dataset contains columns like:\n\nstudent_id: Unique identifier for each student.\nstudy_hours: Number of hours spent studying.\nscore: Exam score (out of 100).\ngrade: Letter grade (A, B, C, D, F).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#identifying-data-quality-issues",
+    "href": "data-cleaning.html#identifying-data-quality-issues",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.5 Identifying Data Quality Issues",
+    "text": "3.5 Identifying Data Quality Issues\n\nMissing Values (NA):\n\nLet’s check for missing values in the score column:\n\n\n\n    library(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.2.3\n\n\nWarning: package 'ggplot2' was built under R version 4.2.3\n\n\nWarning: package 'tibble' was built under R version 4.2.3\n\n\nWarning: package 'tidyr' was built under R version 4.2.3\n\n\nWarning: package 'readr' was built under R version 4.2.3\n\n\nWarning: package 'purrr' was built under R version 4.2.3\n\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\nWarning: package 'stringr' was built under R version 4.2.3\n\n\nWarning: package 'forcats' was built under R version 4.2.3\n\n\nWarning: package 'lubridate' was built under R version 4.2.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n    exam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\n\n    sum(is.na(exam_scores))\n\n[1] 1\n\n\n\ncleaning the NAs\n\n\n#Remove NA values in Exam Scores\nexam_scores &lt;- na.omit(exam_scores)\nexam_scores\n\n   student_id study_hours score grade\n2           2         5.0    88     B\n3           3         1.0    52     F\n4           4         3.0    76     c\n5           5         4.0    82     B\n6           6         2.0   100     C\n7           7         6.0    95     A\n8           8         1.5    58     F\n9           9         3.5    79     C\n10         10         4.5    85     B\n11         11         2.5    73     C\n12         12         5.5    91     A\n13         13         0.5    45     f\n14         14         3.0    77     C\n15         15         4.0    83     B\n16         16        24.0    68     C\n17         17         6.0    96     A\n18         18         1.0    55     F\n19         19         3.5    10     B\n20         20         4.5    86     B\n21         21         2.5    74     C\n22         22         5.5    92     A\n23         23         0.5    48     F\n24         24         3.0    78     C\n25         25         4.0    84     B\n26         26         2.0    69     C\n27         27         6.0    97     A\n28         28         1.0    56     F\n29         29         3.5    81     B\n30         30        48.5    87     b\n\n\n\nOutliers:\n\nLet’s identify potential outliers in the study_hours column using a boxplot:\n\n\nggplot(exam_scores, aes(y = study_hours)) +\n  geom_boxplot() +\n  labs(title = \"Boxplot of Study Hours\")\n\n\n\n\n\n\n\n\n\nWe can then calculate the IQR and identify values outside the typical range:\n\n\nQ1 &lt;- quantile(exam_scores$study_hours, 0.25)\nQ3 &lt;- quantile(exam_scores$study_hours, 0.75)\nIQR &lt;- Q3 - Q1\n\nlower_bound &lt;- Q1 - 1.5 * IQR\nupper_bound &lt;- Q3 + 1.5 * IQR\n\noutliers &lt;- exam_scores %&gt;%\n  filter(study_hours &lt; lower_bound | study_hours &gt; upper_bound)\n\nprint(outliers)\n\n  student_id study_hours score grade\n1         16        24.0    68     C\n2         30        48.5    87     b\n\n\nInconsistent Data:\n\nLet’s check for inconsistent grade entries (e.g., lowercase “a” instead of uppercase “A”):\n\n\nunique(exam_scores$grade) #See if the dataset has what you expect\n\n[1] \"B\" \"F\" \"c\" \"C\" \"A\" \"f\" \"b\"",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#handling-missing-values",
+    "href": "data-cleaning.html#handling-missing-values",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.6 Handling Missing Values",
+    "text": "3.6 Handling Missing Values\n\nRemoval: Let’s remove rows where the exam score is NA.\n\nexam_scores_no_na &lt;- exam_scores %&gt;%\n  filter(!is.na(score))\n\nImputation: We can use a simple ifelse statement to impute with the mean.\n\nMean/Median Imputation: Replace with the mean or median of the column.\n\n\nexam_scores &lt;- exam_scores %&gt;%\n  mutate(score = ifelse(is.na(score), mean(score, na.rm = TRUE), score))",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#handling-outliers",
+    "href": "data-cleaning.html#handling-outliers",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.7 Handling Outliers",
+    "text": "3.7 Handling Outliers\nWe can handle those extreme scores to help reduce the variability of the dataset.\n\nCapping (Winsorizing):\n\n# Cap values above the 95th percentile for study hours.\nupper_threshold &lt;- quantile(exam_scores$study_hours, 0.95)\nexam_scores &lt;- exam_scores %&gt;%\n  mutate(study_hours = ifelse(study_hours &gt; upper_threshold, upper_threshold, study_hours))\nprint(exam_scores)\n\n   student_id study_hours score grade\n2           2         5.0    88     B\n3           3         1.0    52     F\n4           4         3.0    76     c\n5           5         4.0    82     B\n6           6         2.0   100     C\n7           7         6.0    95     A\n8           8         1.5    58     F\n9           9         3.5    79     C\n10         10         4.5    85     B\n11         11         2.5    73     C\n12         12         5.5    91     A\n13         13         0.5    45     f\n14         14         3.0    77     C\n15         15         4.0    83     B\n16         16        16.8    68     C\n17         17         6.0    96     A\n18         18         1.0    55     F\n19         19         3.5    10     B\n20         20         4.5    86     B\n21         21         2.5    74     C\n22         22         5.5    92     A\n23         23         0.5    48     F\n24         24         3.0    78     C\n25         25         4.0    84     B\n26         26         2.0    69     C\n27         27         6.0    97     A\n28         28         1.0    56     F\n29         29         3.5    81     B\n30         30        16.8    87     b",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "data-cleaning.html#correcting-inconsistent-data",
+    "href": "data-cleaning.html#correcting-inconsistent-data",
+    "title": "3  Data Cleaning and Transformation",
+    "section": "3.8 Correcting Inconsistent Data",
+    "text": "3.8 Correcting Inconsistent Data\nText Cleaning: Let’s apply some cleaning techniques to ensure the dataset is formatted as best as possible.\n\n    library(stringr)\n\n    exam_scores &lt;- exam_scores %&gt;%\n      mutate(grade = str_to_upper(grade))\n\n    print(unique(exam_scores$grade)) #Check if things are good now!\n\n[1] \"B\" \"F\" \"C\" \"A\"",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Cleaning and Transformation</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html",
+    "href": "descriptive-statistics.html",
+    "title": "4  Descriptive Statistics",
+    "section": "",
+    "text": "4.1 Introduction\nIn this section, we’ll delve into the world of descriptive statistics. Descriptive statistics provide a summary of your data, allowing you to understand its central tendency, variability, and shape. We’ll learn how to calculate common descriptive statistics in R and interpret their meaning.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html#learning-objectives",
+    "href": "descriptive-statistics.html#learning-objectives",
+    "title": "4  Descriptive Statistics",
+    "section": "4.2 Learning Objectives",
+    "text": "4.2 Learning Objectives\n\nCalculate measures of central tendency (mean, median, mode).\nCalculate measures of dispersion (standard deviation, variance, IQR, range).\nUse dplyr::summarize() to efficiently calculate descriptive statistics.\nUnderstand the relationship between descriptive statistics and data distribution.\nCalculate descriptive statistics for your cloud hosted R project.\nCommit changes to cloud hosted R project with descriptive statistics.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html#measures-of-central-tendency",
+    "href": "descriptive-statistics.html#measures-of-central-tendency",
+    "title": "4  Descriptive Statistics",
+    "section": "4.3 Measures of Central Tendency",
+    "text": "4.3 Measures of Central Tendency\nMeasures of central tendency describe the “center” of a dataset.\n\nMean: The average of all values.\n\nCalculated as the sum of the values divided by the number of values.\n\n\nscores &lt;- c(75, 80, 92, 68, 85)\nmean(scores)\n\n[1] 80\n\n\nMedian: The middle value when the data is sorted.\n\nIf there are an even number of values, the median is the average of the two middle values.\n\n\nmedian(scores)\n\n[1] 80\n\n\nMode: The most frequent value in the dataset.\n\nR doesn’t have a built-in function to calculate the mode directly, so we’ll create one:\n\n\ngetmode &lt;- function(v) {\n  uniqv &lt;- unique(v)\n  uniqv[which.max(tabulate(match(v, uniqv)))]\n}\n\nvalues &lt;- c(1, 2, 2, 3, 4, 4, 4, 5)\ngetmode(values)\n\n[1] 4\n\n\n\nWhen to Use Which Measure:\n\nMean: Sensitive to outliers (extreme values). Use when the data is relatively symmetrical and has no extreme outliers.\nMedian: Robust to outliers. Use when the data has outliers or is skewed.\nMode: Useful for categorical data or discrete data with repeating values.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html#measures-of-dispersion",
+    "href": "descriptive-statistics.html#measures-of-dispersion",
+    "title": "4  Descriptive Statistics",
+    "section": "4.4 Measures of Dispersion",
+    "text": "4.4 Measures of Dispersion\nMeasures of dispersion describe the spread or variability of a dataset.\n\nStandard Deviation: A measure of how spread out the data is around the mean.\n\nA higher standard deviation indicates greater variability.\n\n\nsd(scores)\n\n[1] 9.192388\n\n\nVariance: The square of the standard deviation.\n\nAlso measures variability, but is less interpretable than standard deviation.\n\n\nvar(scores)\n\n[1] 84.5\n\n\nInterquartile Range (IQR): The difference between the 75th percentile (Q3) and the 25th percentile (Q1).\n\nRobust to outliers and provides a measure of the spread of the middle 50% of the data.\n\n\nIQR(scores)\n\n[1] 10\n\n\nRange: The difference between the maximum and minimum values.\n\nrange(scores)\n\n[1] 68 92\n\ndiff(range(scores)) #Calculate the range from the output\n\n[1] 24",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html#descriptive-statistics-with-dplyrsummarize",
+    "href": "descriptive-statistics.html#descriptive-statistics-with-dplyrsummarize",
+    "title": "4  Descriptive Statistics",
+    "section": "4.5 Descriptive Statistics with dplyr::summarize()",
+    "text": "4.5 Descriptive Statistics with dplyr::summarize()\nThe dplyr package provides the summarize() function, which makes it easy to calculate multiple descriptive statistics at once:\n\nlibrary(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n#Replace this file with your local file.\nexam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\n\nexam_scores %&gt;%\n  summarize(\n    mean_score = mean(score),\n    median_score = median(score),\n    sd_score = sd(score),\n    iqr_score = IQR(score),\n    min_score = min(score),\n    max_score = max(score)\n  )\n\n  mean_score median_score sd_score iqr_score min_score max_score\n1   74.33333         78.5 19.38598        21        10       100\n\n\n\n4.5.1 Grouped Descriptive Statistics\nYou can calculate descriptive statistics for different groups within your data using dplyr::group_by() in combination with summarize():\n\nexam_scores %&gt;%\n  group_by(grade) %&gt;%\n  summarize(\n    mean_score = mean(score),\n    median_score = median(score),\n    sd_score = sd(score)\n  )\n\n# A tibble: 7 × 4\n  grade mean_score median_score sd_score\n  &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 A           94.2         95       2.59\n2 B           74.9         83.5    26.3 \n3 C           75.9         74      10.2 \n4 F           53.8         55       3.90\n5 b           87           87      NA   \n6 c           76           76      NA   \n7 f           45           45      NA",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html#descriptive-statistics-and-data-distribution",
+    "href": "descriptive-statistics.html#descriptive-statistics-and-data-distribution",
+    "title": "4  Descriptive Statistics",
+    "section": "4.6 Descriptive Statistics and Data Distribution",
+    "text": "4.6 Descriptive Statistics and Data Distribution\nDescriptive statistics provide insights into the distribution of your data:\n\nSymmetrical Distribution:\n\nMean ≈ Median ≈ Mode\nStandard deviation is relatively small.\n\nRight-Skewed Distribution:\n\nMean &gt; Median &gt; Mode\nLong tail on the right side.\n\nLeft-Skewed Distribution:\n\nMean &lt; Median &lt; Mode\nLong tail on the left side.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "descriptive-statistics.html#practice",
+    "href": "descriptive-statistics.html#practice",
+    "title": "4  Descriptive Statistics",
+    "section": "4.7 Practice",
+    "text": "4.7 Practice\n\nLoad the exam_scores.csv dataset (or your own dataset).\nCalculate the mean, median, standard deviation, IQR, and range for a numerical column.\nCreate a custom function to calculate the mode.\nCalculate descriptive statistics for different groups within the data (e.g., by gender, by region).\nDescribe the shape of the data based on the descriptive statistics you calculated.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Descriptive Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html",
+    "href": "EDA.html",
+    "title": "5  Exploratory Data Analysis",
+    "section": "",
+    "text": "5.1 Visualizing a Single Variable\nIn this section, we will delve into the techniques for visualizing a single variable, which is a fundamental aspect of exploratory data analysis (EDA). Understanding the distribution and characteristics of individual variables is crucial before exploring relationships between multiple variables.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#introduction-to-visualizing-a-single-variable",
+    "href": "EDA.html#introduction-to-visualizing-a-single-variable",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.2 Introduction to Visualizing a Single Variable",
+    "text": "5.2 Introduction to Visualizing a Single Variable\nVisualizing a single variable helps us understand its distribution, central tendency, and spread. This provides valuable insights into the data’s characteristics and potential anomalies. In this section, we will explore different types of plots suitable for single-variable visualization using ggplot2.\n\n5.2.1 Histograms\nHistograms are used to visualize the distribution of a numerical variable by dividing the data into bins and counting the number of observations in each bin.\n\n5.2.1.1 Example 1: Creating a Histogram\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.2.3\n\n\nWarning: package 'ggplot2' was built under R version 4.2.3\n\n\nWarning: package 'tibble' was built under R version 4.2.3\n\n\nWarning: package 'tidyr' was built under R version 4.2.3\n\n\nWarning: package 'readr' was built under R version 4.2.3\n\n\nWarning: package 'purrr' was built under R version 4.2.3\n\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\nWarning: package 'stringr' was built under R version 4.2.3\n\n\nWarning: package 'forcats' was built under R version 4.2.3\n\n\nWarning: package 'lubridate' was built under R version 4.2.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Sample data (replace with your data)\ndata &lt;- data.frame(\n  values = rnorm(1000, mean = 50, sd = 10)\n)\n\n# Creating a histogram\nggplot(data, aes(x = values)) +\n  geom_histogram(binwidth = 5, fill = \"skyblue\", color = \"black\") +\n  labs(title = \"Histogram of Numerical Values\",\n       x = \"Value\",\n       y = \"Frequency\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n5.2.2 Histograms\nHistograms are an extremely common way to visualize the distribution of a single numerical variable. It groups the data into bins, and displays the frequency of the data in each bin as a vertical bar. This type of chart is extremely common, and is one of the easiest way to visualize your data.\n\nexam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\nggplot(exam_scores, aes(x = study_hours)) +\n  geom_histogram(binwidth = 1, fill = \"steelblue\", color = \"white\") +\n  labs(title = \"Histogram of Study Hours\", x = \"Study Hours\", y = \"Frequency\") +\n  theme_minimal()\n\nWarning: Removed 1 rows containing non-finite values (`stat_bin()`).\n\n\n\n\n\n\n\n\n\n\n\n5.2.3 Pie Charts\nPie charts are commonly used to visualize the proportions or percentages of different categories within a categorical variable. While simple, they can be less effective than other chart types when dealing with many categories or subtle differences in proportions.\n\n#Create a data frame to display\nexam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\ngrade_counts &lt;- exam_scores %&gt;%\n  group_by(grade) %&gt;%\n  summarize(count = n())\n\nggplot(grade_counts, aes(x = \"\", y = count, fill = grade)) +\n  geom_bar(stat = \"identity\", width = 1) +\n  coord_polar(\"y\", start = 0) +\n  labs(title = \"Distribution of Grades\", fill = \"Grade\") +\n  theme_void()\n\n\n\n\n\n\n\n\n\nExplanation:\n\n\nstat = \"identity\": Tells geom_bar to use the provided count values directly, instead of counting them.\ncoord_polar(\"y\", start = 0): Transforms the bar chart into a pie chart.\ntheme_void(): Removes unnecessary chart elements for a cleaner look.\n\n\nInterpreting Pie Charts:\n\n\nProportions: The size of each slice represents the proportion of that category within the whole.\nDominant Categories: Easily identify the largest and smallest categories.\n\n\n\n\n\n\n\nNote\n\n\n\nPie charts can be difficult to interpret accurately, especially with many slices of similar size. Consider using bar charts or other visualizations for better clarity.\n\n\n\n\n5.2.4 Bar Charts\nBar charts are used to visualize the distribution of a categorical variable by displaying the frequency or proportion of each category.\n\n# Sample data \ndata &lt;- data.frame(\n  categories = factor(rep(c(\"A\", \"B\", \"C\"), times = c(200, 300, 500)))\n)\n\n# Creating a bar chart\nggplot(data, aes(x = categories)) +\n  geom_bar(fill = \"lightgreen\", color = \"black\") +\n  labs(title = \"Bar Chart of Categorical Variable\",\n       x = \"Category\",\n       y = \"Frequency\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n5.2.5 Box Plots\nBox plots provide a concise summary of the distribution of a numerical variable, showing the median, quartiles, and potential outliers.\n\n# Sample data\ndata &lt;- data.frame(\n  values = rnorm(1000, mean = 50, sd = 10)\n)\n\n# Creating a box plot\nggplot(data, aes(y = values)) +\n  geom_boxplot(fill = \"lightcoral\", color = \"black\") +\n  labs(title = \"Box Plot of Numerical Values\",\n       y = \"Value\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n5.2.6 Density Plots\nDensity plots provide a smoothed representation of the distribution of a numerical variable.\n\n# Sample data \ndata &lt;- data.frame(\n  values = rnorm(1000, mean = 50, sd = 10)\n)\n\n# Creating a density plot\nggplot(data, aes(x = values)) +\n  geom_density(fill = \"lightblue\", alpha = 0.7) +\n  labs(title = \"Density Plot of Numerical Values\",\n       x = \"Value\",\n       y = \"Density\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChoosing the Right Visualization\n\n\n\n\nNumerical Variable: Histograms, box plots, and density plots are suitable for visualizing numerical variables.\nCategorical Variable: Bar charts are used to visualize categorical variables.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#practice",
+    "href": "EDA.html#practice",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.3 Practice",
+    "text": "5.3 Practice\n\nLoad a dataset containing both numerical and categorical variables.\nCreate histograms, bar charts, box plots, and density plots to visualize single variables.\nInterpret the characteristics and distribution of each variable based on the visualizations.\nIdentify potential outliers or anomalies.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#bivariate-visualization",
+    "href": "EDA.html#bivariate-visualization",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.4 Bivariate visualization",
+    "text": "5.4 Bivariate visualization\nIn this section, we’ll extend our exploration of data by examining relationships between two variables simultaneously. This is called bivariate exploratory data analysis (EDA). We’ll focus on using ggplot2 to create visualizations that reveal patterns, correlations, and dependencies between variables.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#what-is-bivariate-eda",
+    "href": "EDA.html#what-is-bivariate-eda",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.5 What is Bivariate EDA?",
+    "text": "5.5 What is Bivariate EDA?\nBivariate EDA helps you answer questions like:\n\nIs there a relationship between these two variables?\nHow strong is the relationship?\nIs the relationship positive or negative?\nDoes the relationship vary across different groups?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#scatter-plots",
+    "href": "EDA.html#scatter-plots",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.6 Scatter Plots",
+    "text": "5.6 Scatter Plots\nScatter plots visualize the relationship between two numerical variables. Each point on the plot represents a single observation, with its position determined by its values for the two variables.\n\nlibrary(tidyverse)\n\n#Replace with your local file, or paste dataset info here\nexam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\n\nggplot(exam_scores, aes(x = study_hours, y = score)) +\n  geom_point(color = \"purple\", size = 3) +\n  labs(title = \"Relationship between Study Hours and Exam Score\", x = \"Study Hours\", y = \"Score\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nExplanation:\n\n\nggplot(exam_scores, aes(x = study_hours, y = score)): Creates a ggplot object, specifying the dataset (exam_scores) and the two variables to visualize (study_hours and score).\ngeom_point(): Adds a scatter plot layer to the plot.\ncolor = \"purple\", size = 3: Sets the color and size of the points.\nlabs(...): Adds a title and axis labels to the plot.\ntheme_minimal(): Applies a minimalist theme for a cleaner look.\n\n\nInterpreting Scatter Plots:\n\n\nDirection: Is the relationship positive (as x increases, y increases), negative (as x increases, y decreases), or non-existent?\nStrength: How closely do the points cluster around a line or curve? A tight cluster indicates a strong relationship.\nForm: Is the relationship linear, non-linear (curved), or clustered?\nOutliers: Are there any points that deviate significantly from the overall pattern?",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#box-plots-1",
+    "href": "EDA.html#box-plots-1",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.7 Box Plots",
+    "text": "5.7 Box Plots\nSide-by-side box plots compare the distribution of a numerical variable across different categories of a categorical variable.\n\nggplot(exam_scores, aes(x = grade, y = score)) +\n  geom_boxplot(fill = \"orange\", color = \"black\") +\n  labs(title = \"Exam Scores by Grade\", x = \"Grade\", y = \"Score\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nExplanation:\n\n\naes(x = grade, y = score): Maps the grade column to the x-axis (categorical variable) and the score column to the y-axis (numerical variable).\n\n\nInterpreting Side-by-Side Box Plots:\n\n\nMedian Differences: Are the medians significantly different across categories?\nSpread Differences: Do the categories have different levels of variability?\nOutliers: Are there more outliers in some categories than others?\nOverlap: How much do the distributions of the categories overlap?\n\n\n5.7.1 Exploring the Impact of Study Hours: Why Group?\nWe’ve seen how grade (a letter grade) relates to score using a side-by-side boxplot. Now, let’s consider the impact of study hours on exam performance. We suspect that students who study more tend to get higher scores. However, study_hours is a numerical variable, and it might not make sense to treat each specific hour value as a separate category. We want to see if students in general can improve a test score given different hours of study.\nInstead, we can group study hours into meaningful ranges like “Low,” “Medium,” and “High.” This will allow us to compare the distribution of exam scores for students with different levels of study commitment. This also gives the benefit of avoiding a test set that is more confusing, or hard to see the individual data points. This also gives an extra layer of generality, since we may want to test this dataset against other student data.\nHere’s how we can create those groups in R and then visualize the relationship with a boxplot.\n\nexam_scores &lt;- exam_scores %&gt;%\n  mutate(\n    study_hours_group = cut(study_hours,\n                              breaks = c(0, 2, 4, 6),\n                              labels = c(\"Low\", \"Medium\", \"High\"),\n                              include.lowest = TRUE)\n  )\n\nggplot(exam_scores, aes(x = study_hours_group, y = score)) +\n  geom_boxplot(fill = \"skyblue\", color = \"black\") +\n  labs(title = \"Exam Scores by Study Hours Group\", x = \"Study Hours Group\", y = \"Score\") +\n  theme_minimal()",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#line-plots",
+    "href": "EDA.html#line-plots",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.8 Line Plots",
+    "text": "5.8 Line Plots\nLine plots visualize trends in a numerical variable over time or across an ordered category.\n\n\n\n\n\n\nNote:\n\n\n\nOur exam_scores dataset doesn’t have a time component, so we’ll create a simple example.\n\n\n\n#If there isn't a time component, we'll create a simple example.\nday &lt;- 1:10\ntemperature &lt;- c(20, 22, 25, 24, 23, 26, 28, 27, 25, 24)\n\nweather_data &lt;- data.frame(day, temperature)\n\nggplot(weather_data, aes(x = day, y = temperature)) +\n  geom_line(color = \"darkblue\", linewidth = 1.2) +\n  geom_point(color = \"red\", size = 3) +\n  labs(title = \"Temperature over Time\", x = \"Day\", y = \"Temperature (°C)\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nExplanation:\n\n\ngeom_line(): Adds a line connecting the data points.\ngeom_point(): Adds points at each data point for clarity.\n\n\nInterpreting Line Plots:\n\n\nTrends: Is the variable increasing, decreasing, or stable over time?\nSeasonality: Are there any repeating patterns?\nCyclicality: Are there any longer-term cycles?\nOutliers: Are there any sudden spikes or dips?\n\n\n5.8.1 Cobweb Plot (Radar Chart)\nCobweb plots, also known as radar charts, are useful for comparing multiple quantitative variables for several different items. The values for each variable are plotted along spokes radiating from a center point. This type of chart works best when comparing items across a limited number of variables (usually less than 10) and when the relative values are more important than the absolute values.\n\nlibrary(tidyverse)\n\n# Create a sample dataset\ndata &lt;- data.frame(\n  Category = c(\"Student1\", \"Student2\", \"Student3\"),\n  Math = c(85, 92, 78),\n  Science = c(90, 88, 95),\n  English = c(78, 85, 90),\n  History = c(92, 80, 85)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(\n    cols = -Category,  # Exclude the 'Category' column\n    names_to = \"Variable\",\n    values_to = \"Value\"\n  )\n\n# Create the radar chart\nggplot(data_long, aes(x = Variable, y = Value, group = Category, color = Category)) +\n  geom_polygon(alpha = 0.2, aes(fill = Category)) +  # Fill the area\n  geom_line(size = 1) +  # Add lines connecting the data points\n  coord_polar() +  # Convert to polar coordinates\n  ylim(0, 100) +  # Set the y-axis limits (adjust based on your data)\n  labs(title = \"Student Performance Comparison\",\n       x = NULL, y = NULL) +\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "EDA.html#multi-variable-plots-in-r",
+    "href": "EDA.html#multi-variable-plots-in-r",
+    "title": "5  Exploratory Data Analysis",
+    "section": "5.9 Multi variable plots in R",
+    "text": "5.9 Multi variable plots in R\nIn this section, we will explore how to examine multiple variables simultaneously. This is a fundamental step in understanding relationships, dependencies, and patterns within a dataset. We’ll cover visualizations and methods that help uncover these insights.\n\n# Sample data \ndata &lt;- data.frame(\n  category = factor(rep(c(\"A\", \"B\", \"C\"), times = c(30, 35, 35))),\n  value = c(rnorm(30, mean = 40, sd = 5),\n            rnorm(35, mean = 50, sd = 7),\n            rnorm(35, mean = 60, sd = 8))\n)\n\n# Creating a box plot\nggplot(data, aes(x = category, y = value)) +\n  geom_boxplot(fill = \"orange\", color = \"black\") +\n  labs(title = \"Box Plot of Value by Category\",\n       x = \"Category\",\n       y = \"Value\") +\n  theme_minimal()",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Exploratory Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html",
+    "href": "visualization-vs-presentation.html",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "",
+    "text": "6.1 Introduction\nIn this section, we’ll explore the critical distinction between data exploration and data presentation. Both are essential components of the data analysis process, but they have different goals, methods, and considerations. Knowing the difference between them will help you tailor your analysis and communication to the appropriate context and audience.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#learning-objectives",
+    "href": "visualization-vs-presentation.html#learning-objectives",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.2 Learning Objectives",
+    "text": "6.2 Learning Objectives\n\nUnderstand the purpose and characteristics of data exploration.\nUnderstand the purpose and characteristics of data presentation.\nIdentify the key differences between data exploration and presentation.\nChoose appropriate visualization methods for exploration vs. presentation.\nCreate compelling visuals for data presentation.\nUnderstand data visualization bias.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#what-is-data-exploration",
+    "href": "visualization-vs-presentation.html#what-is-data-exploration",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.3 What is Data Exploration?",
+    "text": "6.3 What is Data Exploration?\nData exploration is an iterative process of discovering patterns, relationships, and anomalies in a dataset. It’s a detective-like activity, guided by curiosity and a desire to understand the underlying data.\n\n6.3.1 Characteristics of Data Exploration:\n\nGoal: Discover patterns, generate hypotheses, and understand data characteristics.\nAudience: Primarily for the analyst/data scientist themselves (or a small team).\nMethods:\n\nData cleaning and transformation.\nCalculation of summary statistics.\nVisualization (histograms, scatter plots, box plots, etc.).\nHypothesis generation.\n\nEmphasis: Flexibility, experimentation, and uncovering insights.\nLevel of Polish: Often informal, with less emphasis on aesthetics or perfection.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#what-is-data-presentation",
+    "href": "visualization-vs-presentation.html#what-is-data-presentation",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.4 What is Data Presentation?",
+    "text": "6.4 What is Data Presentation?\nData presentation focuses on communicating findings and insights to a specific audience. It’s about telling a compelling story with the data in a clear, concise, and visually appealing manner.\n\n6.4.1 Characteristics of Data Presentation:\n\nGoal: Communicate specific findings, insights, and conclusions to an audience.\nAudience: Stakeholders, decision-makers, clients, or the general public.\nMethods:\n\nCarefully selected visualizations (charts, graphs, tables).\nClear and concise narrative.\nContext and background information.\nKey takeaways and recommendations.\n\nEmphasis: Clarity, accuracy, visual appeal, and persuasiveness.\nLevel of Polish: High, with attention to detail in design, labeling, and formatting.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#key-differences-between-data-exploration-and-presentation",
+    "href": "visualization-vs-presentation.html#key-differences-between-data-exploration-and-presentation",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.5 Key Differences Between Data Exploration and Presentation",
+    "text": "6.5 Key Differences Between Data Exploration and Presentation\n\n\n\n\n\n\n\n\nFeature\nData Exploration\nData Presentation\n\n\n\n\nGoal\nDiscovery, understanding\nCommunication, persuasion\n\n\nAudience\nAnalyst, small team\nStakeholders, decision-makers, wider audience\n\n\nFocus\nFlexibility, experimentation\nClarity, accuracy, visual appeal\n\n\nVisualizations\nQuick, diverse, exploratory\nPolished, focused, impactful\n\n\nNarrative\nMinimal, internal notes\nClear, compelling, tailored to audience\n\n\nLevel of Detail\nHigh (all aspects of the data)\nSelective (highlights key insights)\n\n\n“Aha!” moments\nNew insights\nConfirmation of insights\n\n\nPolished Level\nQuick, functional\nProfessional, polished",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#choosing-appropriate-visualization-methods",
+    "href": "visualization-vs-presentation.html#choosing-appropriate-visualization-methods",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.6 Choosing Appropriate Visualization Methods",
+    "text": "6.6 Choosing Appropriate Visualization Methods\nThe choice of visualization method depends on whether you are in the exploration or presentation phase.\n\n6.6.1 Exploration Visualizations:\n\nHistograms: Quickly understand the distribution of a single variable.\nScatter Plots: Explore relationships between two numerical variables.\nBox Plots: Compare the distribution of a variable across different groups.\nCorrelation Matrices: Identify correlations between multiple numerical variables.\nDensity Plots: See the shape of a distribution.\nParallel Coordinate Plots: To visualize several different dimensions.\n3-D visualizations: Useful for getting a bird’s-eye view of your data.\n\n\n\n6.6.2 Presentation Visualizations:\n\nBar Charts: Compare the magnitudes of different categories (ensure proper baseline and clear labels).\nLine Charts: Show trends over time or across ordered categories (ensure clear labels and scales).\nPie Charts: (Use sparingly) Show proportions or percentages of different categories (limit the number of slices and ensure clear labels).\nMaps: Display geographical data and patterns (use appropriate projections and color schemes).\nScatter Plots (Annotated): Highlight specific points or trends in a relationship between two variables.\n\n\n\n6.6.3 Common rules of thumb for presenting datasets for people\n\nAlways Label clearly\nMake sure axes are consistent\nDo not cut off axes\nDo not hide information",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#creating-compelling-visuals-for-data-presentation",
+    "href": "visualization-vs-presentation.html#creating-compelling-visuals-for-data-presentation",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.7 Creating Compelling Visuals for Data Presentation",
+    "text": "6.7 Creating Compelling Visuals for Data Presentation\nFor data presentation, it’s crucial to create visuals that are clear, accurate, and engaging. Here are some tips:\n\nChoose the Right Chart Type: Select the chart type that best conveys your message and suits your data.\nSimplify the Visual: Remove unnecessary clutter, such as gridlines, extra labels, or overly complex designs.\nUse Color Effectively: Use color to highlight important elements or create visual contrast. Be mindful of colorblindness.\nTell a Story: Use the visualization to tell a clear and compelling story. Add a title, caption, and annotations to guide the viewer.\n\n\n6.7.0.1 Example: Improved Bar Chart for Presentation\nLet’s say you want to present the average exam score for each grade. Here’s how you might create a more polished version for presentation:\nInitial Exploration Chart:\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.2.3\n\n#Basic graph, for exploration\n exam_scores &lt;- read.csv(\"https://raw.githubusercontent.com/sijuswamyresearch/R-for-Data-Analytics/refs/heads/main/data/exam_scores.csv\")\nggplot(exam_scores, aes(x = grade, y = score)) +\n  geom_bar(stat = \"summary\", fun = \"mean\")\n\n\n\n\n\n\n\n\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.2.3\n\n\nWarning: package 'tibble' was built under R version 4.2.3\n\n\nWarning: package 'tidyr' was built under R version 4.2.3\n\n\nWarning: package 'readr' was built under R version 4.2.3\n\n\nWarning: package 'purrr' was built under R version 4.2.3\n\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\nWarning: package 'stringr' was built under R version 4.2.3\n\n\nWarning: package 'forcats' was built under R version 4.2.3\n\n\nWarning: package 'lubridate' was built under R version 4.2.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ lubridate 1.9.2     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n#Assuming the grade is the main column with the average score.\nggplot(exam_scores, aes(x = grade, y = score)) +\n  geom_bar(stat = \"summary\", fun = \"mean\", fill = \"steelblue\") +\n  labs(title = \"Average Exam Score by Grade\",\n       x = \"Grade\",\n       y = \"Average Score\") +\n  theme_minimal() +\n  ylim(0, 100) # Force score values between 0 and 100.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#dangers-of-data-visualization",
+    "href": "visualization-vs-presentation.html#dangers-of-data-visualization",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.8 Dangers of Data Visualization",
+    "text": "6.8 Dangers of Data Visualization\nData visualization can be very powerful for communicating the information with your stakeholders. But it can also give the audience an incorrect understanding of your data\n\n6.8.1 common pitfalls\n\nIncorrect data scale\nHidden and misrepresented data\nSkewed charts\n\n\nData Scale\n\nWhen communicating results make sure that the Y scale correctly represents the values for an accurate picture. Here is an example of an incorrect visualization of the data.\n\nlibrary(tidyverse)\nset.seed(123)\ndata &lt;- data.frame(Category = c(\"A\", \"B\"),\n                   Value = c(60, 55))\n\nggplot(data, aes(x = Category, y = Value)) +\n  geom_bar(stat = \"identity\") +\n  ylim(0, 60) +\n  labs(title = \"Misleading: Y-axis starts at 50\",\n       x = \"Category\", y = \"Value\")\n\n\n\n\n\n\n\n\n\nHidden or misinterpreted data\n\nOne common visualziation mistake is to have incorrect scales and to remove data. If you had one set of data, and only communicated a small part of the data set the audience can get a very wrong idea about the quality and the overall trend.\nThis also applies to things such as selecting the data to use, or cleaning data that may be relevant.\n\nSkewing Charts\n\nMake sure you’re choosing the best methods to display the data. Charts like a pie chart can often be more confusing than helpful.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "visualization-vs-presentation.html#conclusion",
+    "href": "visualization-vs-presentation.html#conclusion",
+    "title": "6  Data Exploration Versus Presentation",
+    "section": "6.9 Conclusion",
+    "text": "6.9 Conclusion\nData exploration and data presentation are two distinct but complementary phases of the data analysis process. Data exploration is about discovering patterns and generating hypotheses. Data presentation is about communicating findings and insights to a specific audience. By understanding the key differences between these phases, you can tailor your analysis and communication to the appropriate context and audience. Choose the right visualization and format for the given situation.\n\nPractice\n\n\nTake a dataset you’ve used previously.\nCreate exploratory visualizations to understand the data.\nSelect a key insight you want to communicate.\nDesign a polished visualization to present that insight to a specific audience (e.g., a non-technical stakeholder).",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Data Exploration Versus Presentation</span>"
+    ]
+  },
+  {
+    "objectID": "statistical-methods.html",
+    "href": "statistical-methods.html",
+    "title": "7  Statistical Methods for Evaluation",
+    "section": "",
+    "text": "7.1 Introduction\nIn this section, we will cover statistical methods used for evaluating data and validating hypotheses. Knowing the different types of statistical tests to perform will be critical for your own dataset.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistical Methods for Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "statistical-methods.html#learning-objectives",
+    "href": "statistical-methods.html#learning-objectives",
+    "title": "7  Statistical Methods for Evaluation",
+    "section": "7.2 Learning Objectives",
+    "text": "7.2 Learning Objectives\n\nExplain the purpose of performing statistical tests.\nIdentify what kind of data types to use for statistical tests.\nCreate a new working git branch with statistical tests",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistical Methods for Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "statistical-methods.html#what-is-a-statistical-test",
+    "href": "statistical-methods.html#what-is-a-statistical-test",
+    "title": "7  Statistical Methods for Evaluation",
+    "section": "7.3 What is a statistical test?",
+    "text": "7.3 What is a statistical test?\nStatistical methods are used to interpret the data. It can include data cleaning, transformation and finding the right models or methods to test.\nSome statistical tests are meant to understand the distributions of data. Other types of statistical tests are meant to compare one distribution against another, or to see if there is a relationships between the dataset.\n\n7.3.1 Types of Data that work best with different tests\nDifferent data formats have unique distributions, which are important to understand before performing any statistical tests. Tests like T-Tests work best with normal-style data, which has to be manually created. Also, there are tests that can convert data into a numerical result to run another test.\nFor this exercise we will discuss the common types of tests:\n\nNormal test Normal test involves checking a statistical assumption. One of the most common checks is the normality assumption.\nT-test Allows for 2 means to be compared. The most common type involves the use of numerical values to perform a comparison.\nPearson Test Determines how strong a relationship is between 2 distributions\nChi-squared Test: Use for evaluating the relationship between 2 categorical features.\n\n\n\n7.3.2 Performing a Normal Statistical Test\nIn general, to create a normal set of distributions, you can use a built in function, for example rnorm to quickly create a normal distribution. Here’s how to create the data and to run a “Normal test” to validate the data:\n\nCreate Dataset\n\n\n# create a normally distributed population set\npopulation_norm &lt;- data.frame(value = rnorm(n = 1000000, mean = 0, sd = 1))\nsummary(population_norm)\n\n     value          \n Min.   :-5.255244  \n 1st Qu.:-0.673105  \n Median : 0.001754  \n Mean   : 0.001035  \n 3rd Qu.: 0.675958  \n Max.   : 5.083772  \n\n\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.2.3\n\n#Visualize distribution, from previous steps.\nggplot(population_norm, aes(value)) +\n  geom_density()\n\n\n\n\n\n\n\n\n\nTesting of normality of the data\n\n\nshapiro.test(population_norm$value[1:5000]) #Run the test.\n\n\n    Shapiro-Wilk normality test\n\ndata:  population_norm$value[1:5000]\nW = 0.99974, p-value = 0.8171\n\n\nIf the p-value is less than the significance level (alpha) you reject the null hypothesis and it means there is a statistical significance. In this case, reject null. The shapiro test is testing if the data “normal”. But in this case if the test passes it has to be rejected, since it will be testing if data is “non-normal”, thus the need to invert the value.\n\n\n7.3.3 Performing a t- Test\nA t-test can be very useful in checking if 2 samples have differences. Here’s how you would run a t-Test.\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.2.3\n\n\nWarning: package 'tibble' was built under R version 4.2.3\n\n\nWarning: package 'tidyr' was built under R version 4.2.3\n\n\nWarning: package 'readr' was built under R version 4.2.3\n\n\nWarning: package 'purrr' was built under R version 4.2.3\n\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\nWarning: package 'stringr' was built under R version 4.2.3\n\n\nWarning: package 'forcats' was built under R version 4.2.3\n\n\nWarning: package 'lubridate' was built under R version 4.2.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ lubridate 1.9.2     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.0\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Create two different populations\npopulation1 &lt;- data.frame(value = rnorm(n = 50, mean = 0, sd = 1), group = \"A\")\npopulation2 &lt;- data.frame(value = rnorm(n = 50, mean = .5, sd = 1), group = \"B\")\n\n# Combine populations\npopulation_combined &lt;- rbind(population1, population2)\ntble=table(population_combined$group)\nbarplot(tble)\n\n\n\n\n\n\n\n\n\nlibrary(dplyr)\n\n# mean of samples\n# Calculate mean of samples over group\nmean_by_group &lt;- population_combined %&gt;%\n  group_by(group) %&gt;%\n  summarize(mean_value = mean(value))\n\nprint(mean_by_group)\n\n# A tibble: 2 × 2\n  group mean_value\n  &lt;chr&gt;      &lt;dbl&gt;\n1 A          0.253\n2 B          0.696\n\n\nPerform t Test. Note, that for this particular function, you will need at least 2 variable.\n\nt.test(data = population_combined, value ~ group)\n\n\n    Welch Two Sample t-test\n\ndata:  value by group\nt = -2.2704, df = 95.214, p-value = 0.02544\nalternative hypothesis: true difference in means between group A and group B is not equal to 0\n95 percent confidence interval:\n -0.83053168 -0.05565391\nsample estimates:\nmean in group A mean in group B \n      0.2527453       0.6958381 \n\n\nFrom here the t-test is the main value to look for, which validates whether the averages are different. The important detail here is the p-value. As mentioned earlier, if the P-Value is less than the alpha, which is typically 0.05, it means that we should reject that distribution.\n\n\n7.3.4 Performing a correlation Test\nCorrelation test will help find any relationships within the data. The most common type of test is the Pearson Test.\n\n#Create data with relationships\nlibrary(tidyverse)\nset.seed(123)\nx = rnorm(100)\ndata &lt;- data.frame(\n  x,\n  y = 2*x + rnorm(100)\n)\n#data\ncor(data)\n\n          x         y\nx 1.0000000 0.8786993\ny 0.8786993 1.0000000\n\n\nCorrelation between the two variables can be tested using the pearson corelation test.\n\ncor.test(data$x, data$y, method = \"pearson\")\n\n\n    Pearson's product-moment correlation\n\ndata:  data$x and data$y\nt = 18.222, df = 98, p-value &lt; 2.2e-16\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n 0.8246011 0.9168722\nsample estimates:\n      cor \n0.8786993 \n\n\nLooking at the information, the details for Pearson tests show a “correlation” value.\n\n\n7.3.5 Performing a chi-squared Test\nThe Chi-squared test is used to determine if there is a statistically significant association between two categorical variables. It’s used when you have data organized in a contingency table (a cross-tabulation of two categorical variables).\nHypotheses:\n\nNull Hypothesis (H0): There is no association between the two categorical variables.\nAlternative Hypothesis (H1): There is an association between the two categorical variables.\n\nHere’s how to perform a Chi-squared test in R:\n\nCreate a Contingency Table: Create a cross-tabulation of the two categorical variables.\n\n\nlibrary(tidyverse)\n\n# Create a sample dataset \ndata &lt;- data.frame(\n  gender = factor(rep(c(\"Male\", \"Female\"), times = c(40, 70))),\n  smoker = factor(rep(c(\"Yes\", \"No\"), times = c(60, 50)))\n)\n\n# Create a contingency table\ncontingency_table &lt;- table(data$gender, data$smoker)\nprint(contingency_table)\n\n        \n         No Yes\n  Female 50  20\n  Male    0  40\n\n\nPerforming chi-squared test.\n\n# Perform the Chi-squared test\nchi_squared_test &lt;- chisq.test(contingency_table)\nprint(chi_squared_test)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  contingency_table\nX-squared = 49.54, df = 1, p-value = 1.944e-12\n\n\n\nInterpreting the Results:\n\nThe output of chisq.test() will provide the following information:\n\nChi-squared Statistic: A measure of the difference between the observed and expected frequencies.\nDegrees of Freedom: Reflects the number of independent pieces of information used in the test.\nP-value: The probability of obtaining the observed results (or more extreme results) if the null hypothesis is true.\n\nA small P-value indicates that the null hypothesis is unlikely to be true.\n\nDecision: If the p-value is less than or equal to the significance level (alpha), you reject the null hypothesis.\n\nIf p-value &lt;= alpha, reject the null hypothesis.\nIf p-value &gt; alpha, fail to reject the null hypothesis.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Statistical Methods for Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html",
+    "href": "micro-project.html",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "",
+    "text": "8.1 Introduction\nKey words: Baseline analysis, categorical data, Likert scaled items, correlation testing, regression models, box plot, bar plot, percentage analysis, \\(\\chi^2\\)-test, ANOVA.\nThis article is prepared during the hands-on sessions of the first phase of the Faculty Development Programme- Data Analytics Using R. A questionnaire is prepared and administered through Google form. Total number of samples collected in the study is 316.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#data-cleaning-and-wrangling",
+    "href": "micro-project.html#data-cleaning-and-wrangling",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.2 Data cleaning and Wrangling",
+    "text": "8.2 Data cleaning and Wrangling\nAs the first stage of the data pre-processing, the row data is cleaned and wrangled to make it ready for statistical analysis. Main processes involved are:\n\nRemoving unnecessary columns\nRename the attributes for make then clear and precise\nMapping of data types for statistical analysis\nRe-frame the structure of the data if required\n\n\n8.2.1 Rename the attribute names\nSince the column titles obtained through the Google forms are the questions given in the questionnaire, it will be not suitable to represent an attribute. There are two ways to correct it- manually correct in the downloaded excel file or rename the column names programatically.\nIn this article, the later approach is demonstrated.\n\ncolnames(df) &lt;- c(\"Gender\",\"Age\",\"Weight\",\"Height\",\"Orange\",\"Grapes\",\"Banana\",\"Apple\",\"Mango\",\"Cherry\")",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#descriptive-analysis",
+    "href": "micro-project.html#descriptive-analysis",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.3 Descriptive Analysis",
+    "text": "8.3 Descriptive Analysis\nA cleaned data is examined with basic statistical tools to understand the distribution of various attributes and its relationship between control variables. At this initial stage, fundamental tools like frequency tables, cross tabulations and percentage analysis followed by proper visualizations will be used. All the socio-demographic variables and control variables will be analysed statistically.\n\nGender\n\nThe gender-wise distribution of the responses is shown in the following Table.\n\nGtab=round(prop.table(table(df$Gender))*100,2)\nGtab\n\n\nFemale   Male \n 53.16  46.84 \n\n\nThe percentage analysis shows that majority of the respondents are from Female category.\nA barplot showing this distribution is shown in the following Figure.\n\nbarplot(Gtab)\n\n\n\n\n\n\n\n\n\nAge\n\nCompleted age of the respondents are collected through the form. Interest of respondents may be varied over age range rather than individual ages. So the continuous variable age shall be converted to a categorical variable for reasonable use of this attribute. Respondents with age upto 20 is consider as ‘adolescent’, between 20 and 30 as ‘youth’ and above 30 is considered as the ‘elder’. A new variable Age_group is created as follows.\n\ndf$Age_group &lt;- cut(df$Age,\n                     breaks=c(-Inf, 20, 30, Inf),\n                     labels=c(\"adolescent\",\"youth\",\"elder\"))\n#df\n\n\ndf$Gender=as.factor(df$Gender)\nbarplot(table(df$Gender,df$Age_group),beside = TRUE,legend.text = levels(df$Gender))\n\n\n\n\n\n\n\n\nA contingency table of the gender-wise distribution over age-group is shown in the Table below:\n\nknitr::kable(table(df$Age_group,df$Gender))\n\n\n\n\n\nFemale\nMale\n\n\n\n\nadolescent\n82\n109\n\n\nyouth\n65\n36\n\n\nelder\n21\n3\n\n\n\n\n\n\n8.3.1 Conversion of data into long format\nThe basic objective of this work is to compare the respondent preference of fruit based on their interest shown in the survey. So responses regarding preference of various fruits under the study should br bring together before statistical investigations. To achieve this goal, the *wide formatted** data is transformed into the long format with a columns for fruits and the corresponding preference level.\n\nlibrary(reshape2)\nlibrary(plyr)\ndata_long &lt;- melt(df,\n        # ID variables - all the variables to keep but not split apart on\n    id.vars=c(\"Gender\",\"Age\",\"Weight\",\"Age_group\",\"Height\"),\n        # The source columns\n    measure.vars=c(\"Orange\", \"Grapes\", \"Banana\",\"Apple\",\"Mango\",\"Cherry\" ),\n        # Name of the destination column that will identify the original\n        # column that the measurement came from\n    variable.name=\"Fruit\",\n    value.name=\"Rating\"\n)\ndata_long &lt;- arrange(data_long,data_long$Fruit, data_long$Rating)# to get a sorted view\n#data_long\n\n\nWeight\n\nThe distribution of respondent’s weights is shown in the Boxplot shown below:\n\nboxplot(df$Weight,notch = F)\n\n\n\n\n\n\n\n\nThe five point summary of the attribite ‘weight’ is shown in the Table below:\n\nsummary(df$Weight)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  38.00   50.00   59.00   59.59   66.00  105.00 \n\n\nIt is noted that the box plot shows the presence of outliers in the weights. These samples can be removed as follows:\n\noutliers &lt;- boxplot(df$Weight, plot=FALSE)$out\ndf1&lt;-df;\ndf1&lt;- df1[-which(df1$Weight %in% outliers),]\n#dim(df1)\n\nA gender-wise comparison of weights is shown in the following figure. It is clear from the plot that, the majority of the female category is above the average body weight category!\n\nboxplot(df1$Weight~df1$Gender,notch = T)\n\n\n\n\n\n\n\n\n\nHeight\n\nThe distribution of respondent’s height is shown in the Boxplot shown below:\n\nboxplot(df$Height,notch = F)\n\n\n\n\n\n\n\n\nThe five point summary of the attribute ‘Height’ is shown in the Table below:\n\nsummary(df$Height)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n    5.5   157.0   165.0   162.9   173.0   192.0 \n\n\nIt is noted that the box plot shows the presence of outliers in the weights. These samples can be removed as follows:\n\noutliers &lt;- boxplot(df$Height, plot=FALSE)$out\ndf1&lt;-df;\ndf1&lt;- df1[-which(df1$Height %in% outliers),]\n#dim(df1)\n\nA gender-wise comparison of heights is shown in the following figure. It is clear from the plot that, the majority of the female category is below the average height category!\n\nboxplot(df1$Height~df1$Gender,notch = T)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#gender-wise-preference-of-fruits",
+    "href": "micro-project.html#gender-wise-preference-of-fruits",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.4 Gender-wise preference of fruits",
+    "text": "8.4 Gender-wise preference of fruits\nA percentage analysis of gender-wise preference of various fruits is given in theis section.\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:plyr':\n\n    arrange, count, desc, failwith, id, mutate, rename, summarise,\n    summarize\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(ggplot2)\n\n# Ensure 'Grapes' is treated as a factor\ndf$Grapes &lt;- as.factor(df$Grapes)\ndf$Gender &lt;- as.factor(df$Gender)\n\n# Check if the column 'Grapes' exists\nif (\"Grapes\" %in% colnames(df)) {\n  df %&gt;%\n    dplyr::count(Grapes, Gender) %&gt;%\n    group_by(Grapes) %&gt;%\n    mutate(pct = prop.table(n) * 100) %&gt;%\n    ggplot(aes(Grapes, pct, fill = Gender)) +\n    geom_bar(stat = \"identity\") +\n    ylab(\"Number of respondents\") +\n    geom_text(aes(label = paste0(sprintf(\"%1.1f\", pct), \"%\")),\n              position = position_stack(vjust = 0.5)) +\n    labs(x = \"Grapes\", y = \"Percentage\", fill = \"Gender\") +\n    theme_bw()\n} else {\n  print(\"Column 'Grapes' not found in the data frame.\")\n}\n\n\n\n\n\n\n\n\n\n#gender-wise\nlibrary(dplyr)\nlibrary(ggplot2)\n\ndf %&gt;%\n  dplyr::count(Mango,Gender) %&gt;%       \n  group_by(Mango) %&gt;%\n  mutate(pct= prop.table(n) * 100) %&gt;%\n  ggplot() + aes(Mango, pct, fill=Gender) +\n  geom_bar(stat=\"identity\") +\n  ylab(\"Number of respondents\") +\n  geom_text(aes(label=paste0(sprintf(\"%1.1f\", pct),\"%\")),\n            position=position_stack(vjust=0.5)) +labs(x =\"Mango\", y = \"Percentage\",fill=\"Gender\")+\n  theme_bw()\n\n\n\n\n\n\n\n\n\n#gender-wise\nlibrary(dplyr)\nlibrary(ggplot2)\n\ndf %&gt;%\n  dplyr::count(Banana,Gender) %&gt;%       \n  group_by(Banana) %&gt;%\n  mutate(pct= prop.table(n) * 100) %&gt;%\n  ggplot() + aes(Banana, pct, fill=Gender) +\n  geom_bar(stat=\"identity\") +\n  ylab(\"Number of respondents\") +\n  geom_text(aes(label=paste0(sprintf(\"%1.1f\", pct),\"%\")),\n            position=position_stack(vjust=0.5)) +labs(x =\"Banana\", y = \"Percentage\",fill=\"Gender\")+\n  theme_bw()",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#overall-preference-over-fruits",
+    "href": "micro-project.html#overall-preference-over-fruits",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.5 Overall preference over fruits",
+    "text": "8.5 Overall preference over fruits\nA percentage analysis of overall preference over various fruits is shown in the following figure.\n\n#gender-wise\nlibrary(dplyr)\nlibrary(ggplot2)\n\ndata_long%&gt;%\n  dplyr::count(Fruit,Rating) %&gt;%       \n  group_by(Fruit) %&gt;%\n  mutate(pct= prop.table(n) * 100) %&gt;%\n  ggplot() + aes(Fruit, pct, fill=Rating) +\n  geom_bar(stat=\"identity\") +\n  ylab(\"Number of respondents\") +\n  geom_text(aes(label=paste0(sprintf(\"%1.1f\", pct),\"%\")),\n            position=position_stack(vjust=0.5)) +labs(x =\"Fruit\", y = \"Percentage\",fill=\"Rating\")+\n  theme_bw()",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#finding-descriptive-statistics-of-continuous-variables",
+    "href": "micro-project.html#finding-descriptive-statistics-of-continuous-variables",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.6 Finding descriptive statistics of continuous variables",
+    "text": "8.6 Finding descriptive statistics of continuous variables\nWeight over Gender\n\nlibrary(dplyr)\nFa=group_by(df, Gender) %&gt;%\n  dplyr::summarise(\n    count = n(),\n    mean =round( mean(Weight, na.rm = TRUE),2),\n    sd = round(sd(Weight, na.rm = TRUE),2)\n  )\nknitr::kable(Fa)\n\n\n\n\nGender\ncount\nmean\nsd\n\n\n\n\nFemale\n168\n53.89\n9.96\n\n\nMale\n148\n66.06\n12.78\n\n\n\n\n\nHeight over Gender\n\nlibrary(dplyr)\nFa=group_by(df, Gender) %&gt;%\n  dplyr::summarise(\n    count = n(),\n    mean =round( mean(Height, na.rm = TRUE),2),\n    sd = round(sd(Height, na.rm = TRUE),2)\n  )\nknitr::kable(Fa)\n\n\n\n\nGender\ncount\nmean\nsd\n\n\n\n\nFemale\n168\n158.57\n10.40\n\n\nMale\n148\n167.85\n25.34\n\n\n\n\n\nHeight over Age Group\n\nlibrary(dplyr)\nFa=group_by(df, Age_group) %&gt;%\n  dplyr::summarise(\n    count = n(),\n    mean =round( mean(Height, na.rm = TRUE),2),\n    sd = round(sd(Height, na.rm = TRUE),2)\n  )\nknitr::kable(Fa)\n\n\n\n\nAge_group\ncount\nmean\nsd\n\n\n\n\nadolescent\n191\n163.33\n20.97\n\n\nyouth\n101\n162.55\n18.38\n\n\nelder\n24\n161.21\n8.73\n\n\n\n\n\n\nlibrary(dplyr)\nFa=group_by(df, Gender) %&gt;%\n  dplyr::summarise(\n    count = n(),\n    mean =round( mean(Age, na.rm = TRUE),2),\n    sd = round(sd(Age, na.rm = TRUE),2)\n  )\nknitr::kable(Fa)\n\n\n\n\nGender\ncount\nmean\nsd\n\n\n\n\nFemale\n168\n22.66\n5.84\n\n\nMale\n148\n20.30\n2.13\n\n\n\n\n\n\n8.6.1 Rename the levels ( For Numerical calculation)\n\ndf$Orange &lt;- factor(df$Orange, \n                  levels = c(\"not at all\",\"if no other fruits available\",\"some what\",\"seasonally\",\"my favorite\"),\n                  labels = c(\"1\",\"2\",\"3\",\"4\",\"5\"))\n#head(df)\n\n\nmean(as.integer(df$Orange))\n\n[1] 3.822785",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#inferential-analysis",
+    "href": "micro-project.html#inferential-analysis",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.7 Inferential Analysis",
+    "text": "8.7 Inferential Analysis\nThe inferential analysis is the generalization part of statistics. This phase focuses on possibilities of generalization of observations in the descriptive analysis. This is achieved through the hypothesis testing aspects of inferential statistics.\n\n8.7.1 Testing of significance of difference in mean weight over gender\nSignificance of difference in mean of continuous variable over two categories can be tested using the t-test. The null hypothesis of the t-test is;\n\n\\(H_0:\\) there is no significance difference in the mean\n\nThe alternative hypothesis is:\n\n\\(H_1:\\) there is significance difference in the mean\n\nIf the p-value of the test result is less than 0.05, the null hypothesis is rejected at \\(5\\%\\) level of significance. Otherwise the null hypothesis can’t be rejected.\nAs an example, let us investigate whether there is significant difference in the mean weight over gender.\n\nt.test(Weight~Gender,alternative=\"less\",data=df)\n\n\n    Welch Two Sample t-test\n\ndata:  Weight by Gender\nt = -9.3516, df = 276.65, p-value &lt; 2.2e-16\nalternative hypothesis: true difference in means between group Female and group Male is less than 0\n95 percent confidence interval:\n      -Inf -10.02187\nsample estimates:\nmean in group Female   mean in group Male \n            53.88988             66.05946 \n\n\n\n#plot(df$Weight~df$Gender)\n\nSince the p-value is less than 0.05, the null hypothesis is rejected. So it is statistically reasonable to conclude that the mean weight of female respondents is less than male respondents.\n\n\n8.7.2 Significance of difference in mean weight over Fruit interest\n\n# Compute the analysis of variance\nres.aov &lt;- aov(Weight ~ Fruit, data = data_long)\n# Summary of the analysis\nsummary(res.aov)\n\n              Df Sum Sq Mean Sq F value Pr(&gt;F)\nFruit          5      0     0.0       0      1\nResiduals   1890 313287   165.8               \n\n\n\nplot(Weight~Fruit,data=data_long)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#testing-of-significance-difference-in-rating-over-fruit-category",
+    "href": "micro-project.html#testing-of-significance-difference-in-rating-over-fruit-category",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.8 Testing of significance difference in rating over Fruit category",
+    "text": "8.8 Testing of significance difference in rating over Fruit category\nAs a first step a percentage analysis is conducted on the fruit preference data as shown below:\n\n8.8.1 Percentage analysis of the rating of fruit category\n\nprop.table(table(data_long$Fruit, data_long$Rating))*100\n\n        \n         if no other fruits available my favorite not at all seasonally\n  Orange                    0.9493671   3.7974684  0.5274262  8.1223629\n  Grapes                    1.1075949   4.4831224  1.0548523  6.4345992\n  Banana                    2.7953586   3.4810127  2.1097046  4.0084388\n  Apple                     1.0021097   6.1708861  1.0021097  5.4852321\n  Mango                     0.2637131  10.6012658  0.7911392  4.0084388\n  Cherry                    1.9514768   3.0063291  2.5843882  4.0084388\n        \n          some what\n  Orange  3.2700422\n  Grapes  3.5864979\n  Banana  4.2721519\n  Apple   3.0063291\n  Mango   1.0021097\n  Cherry  5.1160338\n\n\n\n\n8.8.2 \\(\\chi^2\\) test for confirmation of difference in rating over fruit category\n\n# chi square\nchisq.test(table(data_long$Fruit,data_long$Rating))\n\n\n    Pearson's Chi-squared test\n\ndata:  table(data_long$Fruit, data_long$Rating)\nX-squared = 352.9, df = 20, p-value &lt; 2.2e-16\n\n\nSince the p-value is less than 0.05, the null hypothesis that there is no significant difference in rating over fruit category is rejected. So it is statistically reasonable to conclude that the respondent’s preference over fruits is statistically significant.\n\n\n8.8.3 Fruit preference over Age group\nSignificance of difference in fruit rating over age group is tested using the chi-squared test.\n\n# chi square\nchisq.test(table(data_long$Fruit,data_long$Age_group))\n\n\n    Pearson's Chi-squared test\n\ndata:  table(data_long$Fruit, data_long$Age_group)\nX-squared = 0, df = 10, p-value = 1\n\n\nSince the p-value is greater than 0.05, the null hypothesis that there is no significant difference in the fruit rating over age group.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  },
+  {
+    "objectID": "micro-project.html#conclusion",
+    "href": "micro-project.html#conclusion",
+    "title": "8  Perception of Engineering Students on Fruit Preference",
+    "section": "8.9 Conclusion",
+    "text": "8.9 Conclusion\nBased on the statistical analysis the following findings are elicited.\n\nThere is significant difference in the mean weight of the respondents\nThere is significant difference in the mean weight over fruit preference.\nThere is significant difference in the fruit ratings over fruit type.\nThere is no significant difference in the fruit preference over age group.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Perception of Engineering Students on Fruit Preference</span>"
+    ]
+  }
+]
